@@ -3,9 +3,18 @@
         <title>C0DE</title>
         <link>augustocolombelli.github.io/</link>
         <description>C0DE</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Jan 2021 07:53:14 -0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Jan 2021 07:49:54 -0300</lastBuildDate>
             <atom:link href="augustocolombelli.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Testes unitários com argument captor</title>
+    <link>augustocolombelli.github.io/posts/unit-tests-argument-captor/</link>
+    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
+    <author></author>
+    <guid>augustocolombelli.github.io/posts/unit-tests-argument-captor/</guid>
+    <description><![CDATA[Testes unitários com argument captor Como esse recurso pode ser útil? Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método.
+É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.
+Ele ajuda a verificar o estado do objeto após longas execuções de código, que em muitas vezes, podem estar repleto de condicionais que o afetam.]]></description>
+</item><item>
     <title>Teste</title>
     <link>augustocolombelli.github.io/posts/test-post/</link>
     <pubDate>Mon, 25 Jan 2021 07:53:14 -0300</pubDate>
