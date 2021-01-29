@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>C0DE</title>
-        <link>https://augustocolombelli.github.io/</link>
-        <description>C0DE</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Jan 2021 07:49:54 -0300</lastBuildDate>
-            <atom:link href="https://augustocolombelli.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>Testes - Categoria - C0DE</title>
+        <link>https://augustocolombelli.github.io/categories/testes/</link>
+        <description>Testes - Categoria - C0DE</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Jan 2021 07:49:54 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/categories/testes/" rel="self" type="application/rss+xml" /><item>
     <title>Testes unitários com argument captor</title>
     <link>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>

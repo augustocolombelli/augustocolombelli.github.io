@@ -1,7 +1,28 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - tag - C0DE</title>
-        <link>augustocolombelli.github.io/tags/</link>
-        <description>Tags - tag - C0DE</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
+        <title>Tags - Tag - C0DE</title>
+        <link>https://augustocolombelli.github.io/tags/</link>
+        <description>Tags - Tag - C0DE</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Jan 2021 07:49:54 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>java</title>
+    <link>https://augustocolombelli.github.io/tags/java/</link>
+    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.github.io/tags/java/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>junit</title>
+    <link>https://augustocolombelli.github.io/tags/junit/</link>
+    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.github.io/tags/junit/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>testes-unitarios</title>
+    <link>https://augustocolombelli.github.io/tags/testes-unitarios/</link>
+    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.github.io/tags/testes-unitarios/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>
