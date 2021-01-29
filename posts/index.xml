@@ -9,8 +9,6 @@
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
     <guid>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</guid>
-    <description><![CDATA[Photo by Jr Korpa on Unsplash
-Testes unitários com argument captor Como esse recurso pode ser útil? Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método.
-É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.]]></description>
+    <description><![CDATA[Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.]]></description>
 </item></channel>
 </rss>
