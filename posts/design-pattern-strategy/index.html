@@ -32,7 +32,7 @@
                             "url": "https:\/\/augustocolombelli.github.io\/posts\/design-pattern-strategy\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "design-patterns, java","wordCount":  393 ,
+                        }],"genre": "posts","keywords": "design-patterns, java","wordCount":  408 ,
         "url": "https:\/\/augustocolombelli.github.io\/posts\/design-pattern-strategy\/","datePublished": "2021-01-29T08:16:11-03:00","dateModified": "2021-01-29T08:16:11-03:00","publisher": {
             "@type": "Organization",
             "name": "Autor"},"author": {
@@ -102,7 +102,7 @@
             <h1 class="single-title animated flipInX">Design Pattern - Strategy</h1><div class="post-meta">
                 <div class="post-meta-line"><span class="post-category">
                                 <a href="/categories/design-patterns/"><i class="far fa-folder fa-fw"></i>&nbsp;Design Patterns</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-29">2021-01-29</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;393 palavras
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-29">2021-01-29</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;408 palavras
                     &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutos</div>
             </div>
         </div>
@@ -137,11 +137,10 @@
             </div><p>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Maarten van den Heuvel</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
 <h1 id="padrões-de-projetos-com-strategy">Padrões de Projetos com Strategy</h1>
 <h2 id="como-esse-recurso-pode-ser-útil">Como esse recurso pode ser útil?</h2>
-<p>Esse padrão de projeto é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica.</p>
-<p>Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade. Ele facilita também a introduzir novas regras ao nosso código, quando necessário.</p>
+<p>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeite alguma regra específica. Com ele, podemos criar código mais limpo e classes com menos responsabilidades, reduzindo o uso de condicionais que fazem com que o código gerado fique mais complexo. Ele facilita também a introduzir novas regras ao nosso código, quando necessário.</p>
 <h2 id="como-utilizar">Como utilizar?</h2>
 <h3 id="estrutura-das-classes">Estrutura das classes</h3>
-<p>Na imagem abaixo conseguimos visualizar um diagrama de classes representando as classes necessárias para implementar esse padrão.</p>
+<p>Na imagem abaixo conseguimos visualizar um diagrama de classes representando as classes necessárias para implementar o Strategy.</p>
 <figure>
     <img src="class-diagram-strategy.png"/> <figcaption>
             <h4>Diagrama de Classes</h4>
@@ -155,7 +154,7 @@
 	<span class="kt">double</span> <span class="nf">calculate</span><span class="o">(</span><span class="n">Double</span> <span class="n">value</span><span class="o">);</span>
 
 <span class="o">}</span>
-</code></pre></div><p>Para cada estratégia, precisamos criar uma nova classe que implementa essa estratégia. Nessa classes, incluímos o código específico para aquela regra.</p>
+</code></pre></div><p>Para cada estratégia, precisamos criar uma nova classe que implementa a implementa. Nessa classes, incluímos o código específico para aquela regra.</p>
 <p>Exemplo de uma das estratégias, em que o valor é multiplicado por 0.03.</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StrategyAImpl</span> <span class="kd">implements</span> <span class="n">Strategy</span> <span class="o">{</span>
 
