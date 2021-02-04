@@ -1,9 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - C0DE</title>
+        <title>Tags - Tag - Dev Blog</title>
         <link>https://augustocolombelli.github.io/tags/</link>
-        <description>Tags - Tag - C0DE</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 29 Jan 2021 08:16:11 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <description>Tags - Tag - Dev Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>agile</title>
+    <link>https://augustocolombelli.github.io/tags/agile/</link>
+    <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.github.io/tags/agile/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>processos</title>
+    <link>https://augustocolombelli.github.io/tags/processos/</link>
+    <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.github.io/tags/processos/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>design-patterns</title>
     <link>https://augustocolombelli.github.io/tags/design-patterns/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>

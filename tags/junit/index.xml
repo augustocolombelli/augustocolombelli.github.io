@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>junit - Tag - C0DE</title>
+        <title>junit - Tag - Dev Blog</title>
         <link>https://augustocolombelli.github.io/tags/junit/</link>
-        <description>junit - Tag - C0DE</description>
+        <description>junit - Tag - Dev Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 27 Jan 2021 07:49:54 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/junit/" rel="self" type="application/rss+xml" /><item>
     <title>Testes unitários com argument captor</title>
     <link>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</link>
