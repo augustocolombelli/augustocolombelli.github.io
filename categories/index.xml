@@ -1,28 +1,28 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Categoria - Dev Blog</title>
-        <link>https://augustocolombelli.github.io/categories/</link>
-        <description>Categories - Categoria - Dev Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+        <title>Categories - Categoria - Home</title>
+        <link>https://augustocolombelli.com/categories/</link>
+        <description>Categories - Categoria - Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Times e Processos</title>
-    <link>https://augustocolombelli.github.io/categories/times-e-processos/</link>
+    <link>https://augustocolombelli.com/categories/times-e-processos/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/categories/times-e-processos/</guid>
+    <guid>https://augustocolombelli.com/categories/times-e-processos/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Design Patterns</title>
-    <link>https://augustocolombelli.github.io/categories/design-patterns/</link>
+    <link>https://augustocolombelli.com/categories/design-patterns/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/categories/design-patterns/</guid>
+    <guid>https://augustocolombelli.com/categories/design-patterns/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Testes</title>
-    <link>https://augustocolombelli.github.io/categories/testes/</link>
+    <link>https://augustocolombelli.com/categories/testes/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/categories/testes/</guid>
+    <guid>https://augustocolombelli.com/categories/testes/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

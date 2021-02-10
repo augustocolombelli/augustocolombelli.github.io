@@ -1,49 +1,49 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - Dev Blog</title>
-        <link>https://augustocolombelli.github.io/tags/</link>
-        <description>Tags - Tag - Dev Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <title>Tags - Tag - Home</title>
+        <link>https://augustocolombelli.com/tags/</link>
+        <description>Tags - Tag - Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/tags/" rel="self" type="application/rss+xml" /><item>
     <title>agile</title>
-    <link>https://augustocolombelli.github.io/tags/agile/</link>
+    <link>https://augustocolombelli.com/tags/agile/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/agile/</guid>
+    <guid>https://augustocolombelli.com/tags/agile/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>processos</title>
-    <link>https://augustocolombelli.github.io/tags/processos/</link>
+    <link>https://augustocolombelli.com/tags/processos/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/processos/</guid>
+    <guid>https://augustocolombelli.com/tags/processos/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>design-patterns</title>
-    <link>https://augustocolombelli.github.io/tags/design-patterns/</link>
+    <link>https://augustocolombelli.com/tags/design-patterns/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/design-patterns/</guid>
+    <guid>https://augustocolombelli.com/tags/design-patterns/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>java</title>
-    <link>https://augustocolombelli.github.io/tags/java/</link>
+    <link>https://augustocolombelli.com/tags/java/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/java/</guid>
+    <guid>https://augustocolombelli.com/tags/java/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>junit</title>
-    <link>https://augustocolombelli.github.io/tags/junit/</link>
+    <link>https://augustocolombelli.com/tags/junit/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/junit/</guid>
+    <guid>https://augustocolombelli.com/tags/junit/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>testes-unitarios</title>
-    <link>https://augustocolombelli.github.io/tags/testes-unitarios/</link>
+    <link>https://augustocolombelli.com/tags/testes-unitarios/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/tags/testes-unitarios/</guid>
+    <guid>https://augustocolombelli.com/tags/testes-unitarios/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

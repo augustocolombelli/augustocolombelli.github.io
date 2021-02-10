@@ -1,28 +1,28 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Todos Posts - Dev Blog</title>
-        <link>https://augustocolombelli.github.io/posts/</link>
-        <description>Todos Posts | Dev Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <title>Todos Posts - Home</title>
+        <link>https://augustocolombelli.com/posts/</link>
+        <description>Todos Posts | Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/posts/" rel="self" type="application/rss+xml" /><item>
     <title>User Story — Teoria e prática</title>
-    <link>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</link>
+    <link>https://augustocolombelli.com/posts/user-stories-theory-practice/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</guid>
+    <guid>https://augustocolombelli.com/posts/user-stories-theory-practice/</guid>
     <description><![CDATA[Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento.]]></description>
 </item><item>
     <title>Design Pattern - Strategy</title>
-    <link>https://augustocolombelli.github.io/posts/design-pattern-strategy/</link>
+    <link>https://augustocolombelli.com/posts/design-pattern-strategy/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/posts/design-pattern-strategy/</guid>
+    <guid>https://augustocolombelli.com/posts/design-pattern-strategy/</guid>
     <description><![CDATA[O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade.]]></description>
 </item><item>
-    <title>Testes unitários com argument captor</title>
-    <link>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</link>
+    <title>Testes Unitários - Argument Captor</title>
+    <link>https://augustocolombelli.com/posts/unit-tests-argument-captor/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</guid>
+    <guid>https://augustocolombelli.com/posts/unit-tests-argument-captor/</guid>
     <description><![CDATA[Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.]]></description>
 </item></channel>
 </rss>

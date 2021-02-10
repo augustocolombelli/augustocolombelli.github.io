@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Times e Processos - Categoria - Dev Blog</title>
-        <link>https://augustocolombelli.github.io/categories/times-e-processos/</link>
-        <description>Times e Processos - Categoria - Dev Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/categories/times-e-processos/" rel="self" type="application/rss+xml" /><item>
+        <title>Times e Processos - Categoria - Home</title>
+        <link>https://augustocolombelli.com/categories/times-e-processos/</link>
+        <description>Times e Processos - Categoria - Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 03 Feb 2021 09:16:07 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/categories/times-e-processos/" rel="self" type="application/rss+xml" /><item>
     <title>User Story — Teoria e prática</title>
-    <link>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</link>
+    <link>https://augustocolombelli.com/posts/user-stories-theory-practice/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</guid>
+    <guid>https://augustocolombelli.com/posts/user-stories-theory-practice/</guid>
     <description><![CDATA[Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento.]]></description>
 </item></channel>
 </rss>
