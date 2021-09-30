@@ -2,21 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>User Story — Teoria e prática | </title><meta name="Description" content=""><meta property="og:title" content="User Story — Teoria e prática" />
-<meta property="og:description" content="Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://augustocolombelli.com/posts/user-stories-theory-practice/" />
-<meta property="og:image" content="https://augustocolombelli.com/posts/user-stories-theory-practice/featured-image.png"/>
-<meta property="article:published_time" content="2021-02-03T09:16:07-03:00" />
-<meta property="article:modified_time" content="2021-02-03T09:16:07-03:00" />
-<meta name="twitter:card" content="summary_large_image"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>User Story — Teoria e prática | </title><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://augustocolombelli.com/posts/user-stories-theory-practice/featured-image.png"/>
 <meta name="twitter:title" content="User Story — Teoria e prática"/>
-<meta name="twitter:description" content="Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento."/>
+<meta name="twitter:description" content=""/><meta name="twitter:creator" content="@colombellibr"/><meta name="Description" content=""><meta property="og:title" content="User Story — Teoria e prática" />
+<meta property="og:description" content="Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://augustocolombelli.com/posts/user-stories-theory-practice/" /><meta property="og:image" content="https://augustocolombelli.com/posts/user-stories-theory-practice/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-03T09:16:07-03:00" />
+<meta property="article:modified_time" content="2021-02-03T09:16:07-03:00" />
+
 <meta name="application-name" content="Dev Blog">
-<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/user-stories-theory-practice/" /><link rel="prev" href="https://augustocolombelli.com/posts/design-pattern-strategy/" /><link rel="next" href="https://augustocolombelli.com/posts/transparency-with-burndown/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/user-stories-theory-practice/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lib/prismjs/prism.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,13 +27,8 @@
                             "url": "https:\/\/augustocolombelli.com\/posts\/user-stories-theory-practice\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "agile, processos","wordCount":  827 ,
-        "url": "https:\/\/augustocolombelli.com\/posts\/user-stories-theory-practice\/","datePublished": "2021-02-03T09:16:07-03:00","dateModified": "2021-02-03T09:16:07-03:00","publisher": {
-            "@type": "Organization",
-            "name": "Autor"},"author": {
-                "@type": "Person",
-                "name": "Autor"
-            },"description": ""
+                        }],"genre": "posts","keywords": "agile, processos","wordCount":  822 ,
+        "url": "https:\/\/augustocolombelli.com\/posts\/user-stories-theory-practice\/","datePublished": "2021-02-03T09:16:07-03:00","dateModified": "2021-02-03T09:16:07-03:00","description": ""
     }
     </script><script type="application/ld+json">
     {
@@ -61,67 +53,104 @@
 </script></head>
     <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Home" class="header-logo">Home</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                    <i class="fas fa-adjust fa-fw"></i>
+        <div id="mask"></div><div class="wrapper"><header>
+    <div class="desktop header" id="header-desktop">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Home" class="header-logo logo-svg">Home</a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul class="menu-inner"><li>
+                            <a class="menu-item" href="/posts/"> Posts </a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/"> Tags </a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/"> Categorias </a>
+                        </li></ul>
+                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Home" class="header-logo">Home</a>
+    </div><div class="mobile header" id="header-mobile">
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <a href="/" title="Home" class="header-logo">Home</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle-mobile">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="menu" id="menu-mobile"><nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul><li>
+                            <a class="menu-item" href="/posts/" title="">Posts</a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/" title="">Tags</a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/" title="">Categorias</a>
+                        </li></ul>
+                </nav>
+                <a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <span class="svg-icon icon-moon"></span>
+                </a></div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
-</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+    </div></header><main class="main">
+<div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
             <div class="toc-title">Conteúdos</div>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><div class="header-post">
-        <div class="post-title">
-
-            <div class="post-all-meta">
-            <div class="breadcrumbs">
-    <a href="/">Home </a>/ <a href="/categories/times-e-processos/">Times e Processos </a>/ <a href="/"> User Story — Teoria e prática </a>
-</div>
-            <h1 class="single-title animated flipInX">User Story — Teoria e prática</h1><div class="post-meta">
-                <div class="post-meta-line"><span class="post-category">
-                                <a href="/categories/times-e-processos/"><i class="far fa-folder fa-fw"></i>&nbsp;Times e Processos</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-02-03">2021-02-03</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;827 palavras
-                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;4 minutos</div>
-            </div>
         </div>
 
+    
+    
+    <article>
+    
 
-    </div>
+        <header class="header-post">
 
-    </div>
+            
 
-        <article class="single toc-start">
+            
+            <div class="post-title">
 
-        <div class="content-block content-block-first content-block-position">
+                    <div class="post-all-meta">
+                        <nav class="breadcrumbs">
+    <ol>
+        <li><a href="/">Home </a></li><li><a href="/categories/times-e-processos/">Times e Processos </a></li><li>User Story — Teoria e prática</li>
+    </ol>
+</nav>
+                        <h1 class="single-title flipInX">User Story — Teoria e prática</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+                                <a href="/categories/times-e-processos/"><span class="svg-icon icon-folder"></span>Times e Processos</a>
+                            </span><span class="post-meta-date meta-item">
+                                <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2021-02-03">2021-02-03</time>
+                            </span><span class="post-meta-words meta-item">
+                                <span class="svg-icon icon-pencil"></span>822 palavras
+                            </span>
+                            <span class="post-meta-reading meta-item">
+                                <span class="svg-icon icon-stopwatch"></span>4 minutos
+                            </span>
+                        </div>
 
-        <div class="post"><div class="image-theme-classic">
-                <img src="/posts/user-stories-theory-practice/featured-image.png" style="width: 100%">
-            </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Conteúdos</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+
+                </header>
+
+        <div class="article-post toc-start">
+
+            <div class="content-block content-block-first content-block-position">
+
+                <div class="post single"><div class="image-theme-classic">
+                        <img src="https://augustocolombelli.com/posts/user-stories-theory-practice/featured-image.png" style="width: 100%">
+                    </div><div class="details toc" id="toc-static"  data-kept="">
+                        <div class="details-summary toc-title">
+                            <span>Conteúdos</span>
+                        </div>
+                        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#necessidade-do-usuário">Necessidade do usuário</a></li>
     <li><a href="#quebra-em-histórias-menores">Quebra em histórias menores</a></li>
@@ -129,13 +158,11 @@
     <li><a href="#conclusão">Conclusão</a></li>
   </ul>
 </nav></div>
-            </div><p>Photo by <a href="https://unsplash.com/@sensoryarthouse?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Paul Blenkhorn @SensoryArtHouse</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
-<h1 id="user-story--teoria-e-prática">User Story — Teoria e prática</h1>
-<p>É comum existirem evoluções no ciclo de vida de um software. Essas evoluções podem ser pequenas, médias ou grandes, dependendo da solicitação do usuário. Saber lidar com elas nem sempre é uma tarefa fácil, é necessário ter habilidades que auxiliem a converter uma comunicação verbal ou escrita, em requisitos de sistema objetivos aptos a serem transformados em código.</p>
+                    </div><p>Photo by <a href="https://unsplash.com/@sensoryarthouse?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Paul Blenkhorn @SensoryArtHouse</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+<h1 id="user-story--teoria-e-prática" class="headerLink"><a href="#user-story--teoria-e-pr%c3%a1tica" class="header-mark"></a>User Story — Teoria e prática</h1><p>É comum existirem evoluções no ciclo de vida de um software. Essas evoluções podem ser pequenas, médias ou grandes, dependendo da solicitação do usuário. Saber lidar com elas nem sempre é uma tarefa fácil, é necessário ter habilidades que auxiliem a converter uma comunicação verbal ou escrita, em requisitos de sistema objetivos aptos a serem transformados em código.</p>
 <p>Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento. Martin Fowler escreve sobre o assunto em <a href="https://martinfowler.com/bliki/UserStory.html" target="_blank" rel="noopener noreffer">UserStory</a>, citando o mnemônico INVEST, melhor descrito em <a href="https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/" target="_blank" rel="noopener noreffer">INVEST in Good Stories, and SMART Tasks</a>.</p>
 <p>Em busca de unir a teoria com a prática, nesse texto apresento um exemplo de User Story aplicada em uma demanda de desenvolvimento comum encontrada no dia a dia de equipes de desenvolvimento.</p>
-<h2 id="necessidade-do-usuário">Necessidade do usuário</h2>
-<p>O processo se inicia a partir da necessidade do usuário. O ator principal é o gerente de vendas, que gostaria de apresentar para o seu supervisor quais são os vendedores que mais geraram lucro no mês. Para esses vendedores, gostaria de ter mais detalhes sobre os dados de contato, para assim enviar bons feedbacks.</p>
+<h2 id="necessidade-do-usuário" class="headerLink"><a href="#necessidade-do-usu%c3%a1rio" class="header-mark"></a>Necessidade do usuário</h2><p>O processo se inicia a partir da necessidade do usuário. O ator principal é o gerente de vendas, que gostaria de apresentar para o seu supervisor quais são os vendedores que mais geraram lucro no mês. Para esses vendedores, gostaria de ter mais detalhes sobre os dados de contato, para assim enviar bons feedbacks.</p>
 <p>Por ser um relatório muito utilizado pela empresa, o gerente também gostaria de realizar algumas edições no resultado final do relatório. São em casos específicos, por exemplo: colocar algumas palavras em negrito; marcar em amarelo pontos importantes do relatório; em algumas circunstâncias, remover informações desnecessárias.</p>
 <p>Após diversas conversas entre o analista de negócios e o gerente de vendas, ambos chegaram em algumas conclusões sobre a solicitação de evolução do sistema. São elas:</p>
 <ul>
@@ -144,73 +171,63 @@
 <li>Gerar o relatório utilizando no formato DOC.</li>
 </ul>
 <p>Em uma abordagem tradicional, toda a necessidade do cliente seria codificada, revisada, testada, validada e liberada de uma vez. Isso não é errado, porém é possível otimizar o processo, dando ao usuário final a opção de usufruir com antecedência de entregas parciais do resultado. Nesse sentido, uma opção é dividir a solicitação em histórias menores.</p>
-<h2 id="quebra-em-histórias-menores">Quebra em histórias menores</h2>
-<p>Existe mais de uma opção para realizar a divisão em histórias menores, a escolhida foi em duas histórias como demonstrado a seguir:</p>
+<h2 id="quebra-em-histórias-menores" class="headerLink"><a href="#quebra-em-hist%c3%b3rias-menores" class="header-mark"></a>Quebra em histórias menores</h2><p>Existe mais de uma opção para realizar a divisão em histórias menores, a escolhida foi em duas histórias como demonstrado a seguir:</p>
 <ol>
 <li>Informar o vendedor responsável nas informações de cadastro da venda e visualizar no relatório de análise de vendas os dados: vendedor responsável; e-mail; telefone; e número da venda;</li>
 <li>Gerar o relatório no formato DOC.</li>
 </ol>
 <p>É possível também gerar três histórias, isso não foi feito pois existe uma leve dependência nos dois primeiros itens da solicitação.</p>
-<h2 id="ciclo-de-desenvolvimento">Ciclo de desenvolvimento</h2>
-<p>Esta divisão permite que as demandas sejam independentes, o que possibilita que ambas avancem no processo sem que uma interfira na outra. Os quadros abaixo demonstram o fluxo de desenvolvimento das história. Um bom exemplo pode ser visto no quadro 5, a história 1 não passou nos testes tornando necessário realizar pequenos ajustes. Já no quadro 6, a história 2 foi entregue para o usuário final sem que o erro encontrado na primeira história interferisse em seu fluxo.</p>
+<h2 id="ciclo-de-desenvolvimento" class="headerLink"><a href="#ciclo-de-desenvolvimento" class="header-mark"></a>Ciclo de desenvolvimento</h2><p>Esta divisão permite que as demandas sejam independentes, o que possibilita que ambas avancem no processo sem que uma interfira na outra. Os quadros abaixo demonstram o fluxo de desenvolvimento das história. Um bom exemplo pode ser visto no quadro 5, a história 1 não passou nos testes tornando necessário realizar pequenos ajustes. Já no quadro 6, a história 2 foi entregue para o usuário final sem que o erro encontrado na primeira história interferisse em seu fluxo.</p>
 <hr>
-<figure>
-    <img src="1-quebra-solicitacao-duas-historias.png"
-         alt="Quadro 1 — Quebra da solicitação em duas histórias."/> <figcaption>
+<figure><img src="1-quebra-solicitacao-duas-historias.png"
+         alt="Quadro 1 — Quebra da solicitação em duas histórias."/><figcaption>
             <p>Quadro 1 — Quebra da solicitação em duas histórias.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="2-inicio-implementacao-primeira-historia.png"
-         alt="Quadro 2 — Início da implementação da primeira história."/> <figcaption>
+<figure><img src="2-inicio-implementacao-primeira-historia.png"
+         alt="Quadro 2 — Início da implementação da primeira história."/><figcaption>
             <p>Quadro 2 — Início da implementação da primeira história.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="3-revisao-primeira-histiria-implementacao-segunda.png"
-         alt="Quadro 3 — Revisão da primeira história e implementação da segunda."/> <figcaption>
+<figure><img src="3-revisao-primeira-histiria-implementacao-segunda.png"
+         alt="Quadro 3 — Revisão da primeira história e implementação da segunda."/><figcaption>
             <p>Quadro 3 — Revisão da primeira história e implementação da segunda.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="4-testes-primeira-historia-revisao-segunda.png"
-         alt="Quadro 4 — Testes da primeira história e revisão da segunda."/> <figcaption>
+<figure><img src="4-testes-primeira-historia-revisao-segunda.png"
+         alt="Quadro 4 — Testes da primeira história e revisão da segunda."/><figcaption>
             <p>Quadro 4 — Testes da primeira história e revisão da segunda.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="5-correcao-defeito-encontrado-primeira-historia-inicio-testes-segunda.png"
-         alt="Quadro 5 — Correção de defeito encontrado na primeira história e início dos testes na segunda."/> <figcaption>
+<figure><img src="5-correcao-defeito-encontrado-primeira-historia-inicio-testes-segunda.png"
+         alt="Quadro 5 — Correção de defeito encontrado na primeira história e início dos testes na segunda."/><figcaption>
             <p>Quadro 5 — Correção de defeito encontrado na primeira história e início dos testes na segunda.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="6-segunda-historia-entregue-para-usuario-final.png"
-         alt="Quadro 6 — Segunda história é entregue para usuário final."/> <figcaption>
+<figure><img src="6-segunda-historia-entregue-para-usuario-final.png"
+         alt="Quadro 6 — Segunda história é entregue para usuário final."/><figcaption>
             <p>Quadro 6 — Segunda história é entregue para usuário final.</p>
         </figcaption>
 </figure>
 
 <hr>
-<figure>
-    <img src="7-primeira-historia-tambem-entregue-para-usuario-final.png"
-         alt="Quadro 7 — Primeira história também é entregue para usuário final."/> <figcaption>
+<figure><img src="7-primeira-historia-tambem-entregue-para-usuario-final.png"
+         alt="Quadro 7 — Primeira história também é entregue para usuário final."/><figcaption>
             <p>Quadro 7 — Primeira história também é entregue para usuário final.</p>
         </figcaption>
 </figure>
 
-<h2 id="conclusão">Conclusão</h2>
-<p>A divisão de uma solicitação em histórias menores pode ser feita de diversas maneiras. Não existe uma forma correta, sempre vai depender do cenário naquele momento. Em algumas ocasiões ter histórias pequenas é bom, porém em outros momentos pode gerar mais trabalho que o necessário.
+<h2 id="conclusão" class="headerLink"><a href="#conclus%c3%a3o" class="header-mark"></a>Conclusão</h2><p>A divisão de uma solicitação em histórias menores pode ser feita de diversas maneiras. Não existe uma forma correta, sempre vai depender do cenário naquele momento. Em algumas ocasiões ter histórias pequenas é bom, porém em outros momentos pode gerar mais trabalho que o necessário.
 Neste exemplo, trabalhar com histórias menores permitiu explorar os itens Independent e Valuable do INVEST. O uso de histórias independentes gerou mais flexibilidade na tomada de decisão. Como pontos positivos, é possível citar:</p>
 <ul>
 <li>Revisão de código e teste de cada história pode ser feito em momentos diferentes;</li>
@@ -222,33 +239,42 @@ Neste exemplo, trabalhar com histórias menores permitiu explorar os itens Indep
 <li>Ao entregar em partes uma demanda é possível negociar prazos e prioridade junto ao cliente, o que permite satisfazer as principais dores mais rápido e negociar prazos maiores para entregas mais demoradas ou de menor maior;</li>
 <li>É mais fácil separar trabalho dentro de um time, pois histórias de uma mesma solicitação se tornaram independentes.</li>
 </ul>
-</div>
+</div><footer>
+                        <div class="post">
 
-            <div class="post"><div class="post-info-share">
-    <span></span>
-</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
-            <a class="nav-box" href="/posts/design-pattern-strategy/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">Design Pattern - Strategy</span></div></a>
+
+<div class="post-share"></div>
+
+
+
+
+
+
+<div class="post-tags"><a href="/tags/agile/" class="tag">agile</a><a href="/tags/processos/" class="tag">processos</a></div></div>
+                </footer></div>
+
+        <div id="toc-final"></div>
         </div>
-        <div class="post-nav-box nav-box-next">
-            <a class="nav-box" href="/posts/transparency-with-burndown/"><div style="padding-right: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">Transparência com gráfico de burndown</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
-        </div></div></div>
-</div>
-        </div>
-    <div id="toc-final"></div>
-    </article><div class=" post-tags post-tags-toc "><a href="/tags/agile/" class="tag">agile</a><a href="/tags/processos/" class="tag">processos</a></div><div class="page single comments content-block-position"><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+
+    
+    </article>
+    <section class="page single comments content-block-position">
+        <h1 class="display-hidden">Комментарии</h1><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div></main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+            </noscript></div></section></div>
+
+</main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Tema - <a href="https://ublogger.netlify.app/?utm_source=https://augustocolombelli.com/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
-                <i class="fas fa-arrow-up fa-fw"></i>
+        <aside id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="svg-icon icon-arrow-up"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script><script>
+        </aside><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script>
                 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
                 gtag('config', 'G-D0E03R1P6Q');
             </script><script src="https://www.googletagmanager.com/gtag/js?id=G-D0E03R1P6Q" async></script></body>

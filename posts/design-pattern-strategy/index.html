@@ -2,21 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Design Pattern - Strategy | </title><meta name="Description" content=""><meta property="og:title" content="Design Pattern - Strategy" />
-<meta property="og:description" content="O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://augustocolombelli.com/posts/design-pattern-strategy/" />
-<meta property="og:image" content="https://augustocolombelli.com/posts/design-pattern-strategy/featured-image.png"/>
-<meta property="article:published_time" content="2021-01-29T08:16:11-03:00" />
-<meta property="article:modified_time" content="2021-01-29T08:16:11-03:00" />
-<meta name="twitter:card" content="summary_large_image"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>Design Pattern - Strategy | </title><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://augustocolombelli.com/posts/design-pattern-strategy/featured-image.png"/>
 <meta name="twitter:title" content="Design Pattern - Strategy"/>
-<meta name="twitter:description" content="O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade."/>
+<meta name="twitter:description" content=""/><meta name="twitter:creator" content="@colombellibr"/><meta name="Description" content=""><meta property="og:title" content="Design Pattern - Strategy" />
+<meta property="og:description" content="O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://augustocolombelli.com/posts/design-pattern-strategy/" /><meta property="og:image" content="https://augustocolombelli.com/posts/design-pattern-strategy/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-29T08:16:11-03:00" />
+<meta property="article:modified_time" content="2021-01-29T08:16:11-03:00" />
+
 <meta name="application-name" content="Dev Blog">
-<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/design-pattern-strategy/" /><link rel="prev" href="https://augustocolombelli.com/posts/unit-tests-argument-captor/" /><link rel="next" href="https://augustocolombelli.com/posts/user-stories-theory-practice/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/design-pattern-strategy/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lib/prismjs/prism.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,13 +27,8 @@
                             "url": "https:\/\/augustocolombelli.com\/posts\/design-pattern-strategy\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "design-patterns, java","wordCount":  409 ,
-        "url": "https:\/\/augustocolombelli.com\/posts\/design-pattern-strategy\/","datePublished": "2021-01-29T08:16:11-03:00","dateModified": "2021-01-29T08:16:11-03:00","publisher": {
-            "@type": "Organization",
-            "name": "Autor"},"author": {
-                "@type": "Person",
-                "name": "Autor"
-            },"description": ""
+                        }],"genre": "posts","keywords": "design-patterns, java","wordCount":  403 ,
+        "url": "https:\/\/augustocolombelli.com\/posts\/design-pattern-strategy\/","datePublished": "2021-01-29T08:16:11-03:00","dateModified": "2021-01-29T08:16:11-03:00","description": ""
     }
     </script><script type="application/ld+json">
     {
@@ -61,67 +53,104 @@
 </script></head>
     <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Home" class="header-logo">Home</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                    <i class="fas fa-adjust fa-fw"></i>
+        <div id="mask"></div><div class="wrapper"><header>
+    <div class="desktop header" id="header-desktop">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Home" class="header-logo logo-svg">Home</a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul class="menu-inner"><li>
+                            <a class="menu-item" href="/posts/"> Posts </a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/"> Tags </a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/"> Categorias </a>
+                        </li></ul>
+                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Home" class="header-logo">Home</a>
+    </div><div class="mobile header" id="header-mobile">
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <a href="/" title="Home" class="header-logo">Home</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle-mobile">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="menu" id="menu-mobile"><nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul><li>
+                            <a class="menu-item" href="/posts/" title="">Posts</a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/" title="">Tags</a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/" title="">Categorias</a>
+                        </li></ul>
+                </nav>
+                <a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <span class="svg-icon icon-moon"></span>
+                </a></div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
-</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+    </div></header><main class="main">
+<div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
             <div class="toc-title">Conteúdos</div>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><div class="header-post">
-        <div class="post-title">
-
-            <div class="post-all-meta">
-            <div class="breadcrumbs">
-    <a href="/">Home </a>/ <a href="/categories/design-patterns/">Design Patterns </a>/ <a href="/"> Design Pattern - Strategy </a>
-</div>
-            <h1 class="single-title animated flipInX">Design Pattern - Strategy</h1><div class="post-meta">
-                <div class="post-meta-line"><span class="post-category">
-                                <a href="/categories/design-patterns/"><i class="far fa-folder fa-fw"></i>&nbsp;Design Patterns</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-29">2021-01-29</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;409 palavras
-                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutos</div>
-            </div>
         </div>
 
+    
+    
+    <article>
+    
 
-    </div>
+        <header class="header-post">
 
-    </div>
+            
 
-        <article class="single toc-start">
+            
+            <div class="post-title">
 
-        <div class="content-block content-block-first content-block-position">
+                    <div class="post-all-meta">
+                        <nav class="breadcrumbs">
+    <ol>
+        <li><a href="/">Home </a></li><li><a href="/categories/design-patterns/">Design Patterns </a></li><li>Design Pattern - Strategy</li>
+    </ol>
+</nav>
+                        <h1 class="single-title flipInX">Design Pattern - Strategy</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+                                <a href="/categories/design-patterns/"><span class="svg-icon icon-folder"></span>Design Patterns</a>
+                            </span><span class="post-meta-date meta-item">
+                                <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2021-01-29">2021-01-29</time>
+                            </span><span class="post-meta-words meta-item">
+                                <span class="svg-icon icon-pencil"></span>403 palavras
+                            </span>
+                            <span class="post-meta-reading meta-item">
+                                <span class="svg-icon icon-stopwatch"></span>2 minutos
+                            </span>
+                        </div>
 
-        <div class="post"><div class="image-theme-classic">
-                <img src="/posts/design-pattern-strategy/featured-image.png" style="width: 100%">
-            </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Conteúdos</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+
+                </header>
+
+        <div class="article-post toc-start">
+
+            <div class="content-block content-block-first content-block-position">
+
+                <div class="post single"><div class="image-theme-classic">
+                        <img src="https://augustocolombelli.com/posts/design-pattern-strategy/featured-image.png" style="width: 100%">
+                    </div><div class="details toc" id="toc-static"  data-kept="">
+                        <div class="details-summary toc-title">
+                            <span>Conteúdos</span>
+                        </div>
+                        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#como-esse-recurso-pode-ser-útil">Como esse recurso pode ser útil?</a></li>
     <li><a href="#como-utilizar">Como utilizar?</a>
@@ -133,43 +162,37 @@
     </li>
   </ul>
 </nav></div>
-            </div><p>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Maarten van den Heuvel</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
-<h1 id="padrões-de-projetos-com-strategy">Padrões de Projetos com Strategy</h1>
-<h2 id="como-esse-recurso-pode-ser-útil">Como esse recurso pode ser útil?</h2>
-<p>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeite alguma regra específica. Com ele, podemos criar código mais limpo e classes com menos responsabilidades, reduzindo o uso de condicionais que fazem com que o código gerado fique mais complexo. Ele facilita também a introduzir novas regras ao nosso código, quando necessário.</p>
-<h2 id="como-utilizar">Como utilizar?</h2>
-<h3 id="estrutura-das-classes">Estrutura das classes</h3>
-<p>Na imagem abaixo conseguimos visualizar um diagrama de classes representando as classes necessárias para implementar o Strategy.</p>
-<figure>
-    <img src="class-diagram-strategy.png"/> <figcaption>
+                    </div><p>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Maarten van den Heuvel</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+<h1 id="padrões-de-projetos-com-strategy" class="headerLink"><a href="#padr%c3%b5es-de-projetos-com-strategy" class="header-mark"></a>Padrões de Projetos com Strategy</h1><h2 id="como-esse-recurso-pode-ser-útil" class="headerLink"><a href="#como-esse-recurso-pode-ser-%c3%batil" class="header-mark"></a>Como esse recurso pode ser útil?</h2><p>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeite alguma regra específica. Com ele, podemos criar código mais limpo e classes com menos responsabilidades, reduzindo o uso de condicionais que fazem com que o código gerado fique mais complexo. Ele facilita também a introduzir novas regras ao nosso código, quando necessário.</p>
+<h2 id="como-utilizar" class="headerLink"><a href="#como-utilizar" class="header-mark"></a>Como utilizar?</h2><h3 id="estrutura-das-classes" class="headerLink"><a href="#estrutura-das-classes" class="header-mark"></a>Estrutura das classes</h3><p>Na imagem abaixo conseguimos visualizar um diagrama de classes representando as classes necessárias para implementar o Strategy.</p>
+<figure><img src="class-diagram-strategy.png"/><figcaption>
             <h4>Diagrama de Classes</h4>
         </figcaption>
 </figure>
 
-<h3 id="implementação">Implementação</h3>
-<p>Para implementá-lo, precisamos ter uma Interface com o método comum a ser utilizado pelas diferentes estratégias.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Strategy</span> <span class="o">{</span>
+<h3 id="implementação" class="headerLink"><a href="#implementa%c3%a7%c3%a3o" class="header-mark"></a>Implementação</h3><p>Para implementá-lo, precisamos ter uma Interface com o método comum a ser utilizado pelas diferentes estratégias.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Strategy</span> <span class="o">{</span>
 
 	<span class="kt">double</span> <span class="nf">calculate</span><span class="o">(</span><span class="n">Double</span> <span class="n">value</span><span class="o">);</span>
 
 <span class="o">}</span>
 </code></pre></div><p>Para cada estratégia, precisamos criar uma nova classe que a implementa. Nessa classes, incluímos o código específico para a regra em questão.</p>
 <p>Exemplo de uma das estratégias, em que o valor é multiplicado por 0.03.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StrategyAImpl</span> <span class="kd">implements</span> <span class="n">Strategy</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StrategyAImpl</span> <span class="kd">implements</span> <span class="n">Strategy</span> <span class="o">{</span>
 
 	<span class="kd">public</span> <span class="kt">double</span> <span class="nf">calculate</span><span class="o">(</span><span class="n">Double</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">0</span><span class="o">.</span><span class="na">03</span><span class="o">;</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><p>Exemplo de uma segunda estratégia, em que o valor é multiplicado por outro valor que é o 0.05.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StrategyBImpl</span> <span class="kd">implements</span> <span class="n">Strategy</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StrategyBImpl</span> <span class="kd">implements</span> <span class="n">Strategy</span> <span class="o">{</span>
 
 	<span class="kd">public</span> <span class="kt">double</span> <span class="nf">calculate</span><span class="o">(</span><span class="n">Double</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">0</span><span class="o">.</span><span class="na">05</span><span class="o">;</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><p>Em um nível acima, temos a classes com todo o algoritmo a ser executado. Em nosso caso, representamos ela com a classe ExecuteStrategy. Ela recebe em seu construtor a estratégia a ser executada. No método de execução, ela realiza o cálculo e em seguida simula a impressão do resultado.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExecuteStrategy</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExecuteStrategy</span> <span class="o">{</span>
 
 	<span class="kd">private</span> <span class="n">Strategy</span> <span class="n">strategy</span><span class="o">;</span>
 
@@ -190,7 +213,7 @@
 <span class="o">}</span>
 
 </code></pre></div><p>A classe abaixo possui método que nos ajuda a testar e visualizar o resultado de cada uma das operações, utilizando as diferentes estratégias.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RunStrategies</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RunStrategies</span> <span class="o">{</span>
 
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
@@ -215,35 +238,43 @@
 	<span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div><h3 id="fontes-do-projeto">Fontes do projeto</h3>
-<p><a href="https://github.com/augustocolombelli/design-pattern-strategy/">https://github.com/augustocolombelli/design-pattern-strategy/</a></p>
-</div>
+</code></pre></div><h3 id="fontes-do-projeto" class="headerLink"><a href="#fontes-do-projeto" class="header-mark"></a>Fontes do projeto</h3><p><a href="https://github.com/augustocolombelli/design-pattern-strategy/" target="_blank" rel="noopener noreffer">https://github.com/augustocolombelli/design-pattern-strategy/</a></p>
+</div><footer>
+                        <div class="post">
 
-            <div class="post"><div class="post-info-share">
-    <span></span>
-</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
-            <a class="nav-box" href="/posts/unit-tests-argument-captor/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">Testes Unitários - Argument Captor</span></div></a>
+
+<div class="post-share"></div>
+
+
+
+
+
+
+<div class="post-tags"><a href="/tags/design-patterns/" class="tag">design-patterns</a><a href="/tags/java/" class="tag">java</a></div></div>
+                </footer></div>
+
+        <div id="toc-final"></div>
         </div>
-        <div class="post-nav-box nav-box-next">
-            <a class="nav-box" href="/posts/user-stories-theory-practice/"><div style="padding-right: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">User Story — Teoria e prática</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
-        </div></div></div>
-</div>
-        </div>
-    <div id="toc-final"></div>
-    </article><div class=" post-tags post-tags-toc "><a href="/tags/design-patterns/" class="tag">design-patterns</a><a href="/tags/java/" class="tag">java</a></div><div class="page single comments content-block-position"><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+
+    
+    </article>
+    <section class="page single comments content-block-position">
+        <h1 class="display-hidden">Комментарии</h1><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div></main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+            </noscript></div></section></div>
+
+</main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Tema - <a href="https://ublogger.netlify.app/?utm_source=https://augustocolombelli.com/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
-                <i class="fas fa-arrow-up fa-fw"></i>
+        <aside id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="svg-icon icon-arrow-up"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script><script>
+        </aside><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script>
                 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
                 gtag('config', 'G-D0E03R1P6Q');
             </script><script src="https://www.googletagmanager.com/gtag/js?id=G-D0E03R1P6Q" async></script></body>

@@ -2,21 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Testes Unitários - Argument Captor | </title><meta name="Description" content=""><meta property="og:title" content="Testes Unitários - Argument Captor" />
-<meta property="og:description" content="Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://augustocolombelli.com/posts/unit-tests-argument-captor/" />
-<meta property="og:image" content="https://augustocolombelli.com/posts/unit-tests-argument-captor/featured-image.png"/>
-<meta property="article:published_time" content="2021-01-27T07:49:54-03:00" />
-<meta property="article:modified_time" content="2021-01-27T07:49:54-03:00" />
-<meta name="twitter:card" content="summary_large_image"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>Testes Unitários - Argument Captor | </title><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://augustocolombelli.com/posts/unit-tests-argument-captor/featured-image.png"/>
 <meta name="twitter:title" content="Testes Unitários - Argument Captor"/>
-<meta name="twitter:description" content="Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional."/>
+<meta name="twitter:description" content=""/><meta name="twitter:creator" content="@colombellibr"/><meta name="Description" content=""><meta property="og:title" content="Testes Unitários - Argument Captor" />
+<meta property="og:description" content="Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://augustocolombelli.com/posts/unit-tests-argument-captor/" /><meta property="og:image" content="https://augustocolombelli.com/posts/unit-tests-argument-captor/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-27T07:49:54-03:00" />
+<meta property="article:modified_time" content="2021-01-27T07:49:54-03:00" />
+
 <meta name="application-name" content="Dev Blog">
-<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/unit-tests-argument-captor/" /><link rel="next" href="https://augustocolombelli.com/posts/design-pattern-strategy/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/unit-tests-argument-captor/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lib/prismjs/prism.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,13 +27,8 @@
                             "url": "https:\/\/augustocolombelli.com\/posts\/unit-tests-argument-captor\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "testes-unitarios, java, junit","wordCount":  232 ,
-        "url": "https:\/\/augustocolombelli.com\/posts\/unit-tests-argument-captor\/","datePublished": "2021-01-27T07:49:54-03:00","dateModified": "2021-01-27T07:49:54-03:00","publisher": {
-            "@type": "Organization",
-            "name": "Autor"},"author": {
-                "@type": "Person",
-                "name": "Autor"
-            },"description": ""
+                        }],"genre": "posts","keywords": "testes-unitarios, java, junit","wordCount":  227 ,
+        "url": "https:\/\/augustocolombelli.com\/posts\/unit-tests-argument-captor\/","datePublished": "2021-01-27T07:49:54-03:00","dateModified": "2021-01-27T07:49:54-03:00","description": ""
     }
     </script><script type="application/ld+json">
     {
@@ -61,67 +53,104 @@
 </script></head>
     <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Home" class="header-logo">Home</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                    <i class="fas fa-adjust fa-fw"></i>
+        <div id="mask"></div><div class="wrapper"><header>
+    <div class="desktop header" id="header-desktop">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Home" class="header-logo logo-svg">Home</a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul class="menu-inner"><li>
+                            <a class="menu-item" href="/posts/"> Posts </a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/"> Tags </a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/"> Categorias </a>
+                        </li></ul>
+                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Home" class="header-logo">Home</a>
+    </div><div class="mobile header" id="header-mobile">
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <a href="/" title="Home" class="header-logo">Home</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle-mobile">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="menu" id="menu-mobile"><nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul><li>
+                            <a class="menu-item" href="/posts/" title="">Posts</a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/" title="">Tags</a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/" title="">Categorias</a>
+                        </li></ul>
+                </nav>
+                <a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <span class="svg-icon icon-moon"></span>
+                </a></div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
-</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+    </div></header><main class="main">
+<div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
             <div class="toc-title">Conteúdos</div>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><div class="header-post">
-        <div class="post-title">
-
-            <div class="post-all-meta">
-            <div class="breadcrumbs">
-    <a href="/">Home </a>/ <a href="/categories/testes/">Testes </a>/ <a href="/"> Testes Unitários - Argument Captor </a>
-</div>
-            <h1 class="single-title animated flipInX">Testes Unitários - Argument Captor</h1><div class="post-meta">
-                <div class="post-meta-line"><span class="post-category">
-                                <a href="/categories/testes/"><i class="far fa-folder fa-fw"></i>&nbsp;Testes</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-27">2021-01-27</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;232 palavras
-                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;2 minutos</div>
-            </div>
         </div>
 
+    
+    
+    <article>
+    
 
-    </div>
+        <header class="header-post">
 
-    </div>
+            
 
-        <article class="single toc-start">
+            
+            <div class="post-title">
 
-        <div class="content-block content-block-first content-block-position">
+                    <div class="post-all-meta">
+                        <nav class="breadcrumbs">
+    <ol>
+        <li><a href="/">Home </a></li><li><a href="/categories/testes/">Testes </a></li><li>Testes Unitários - Argument Captor</li>
+    </ol>
+</nav>
+                        <h1 class="single-title flipInX">Testes Unitários - Argument Captor</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+                                <a href="/categories/testes/"><span class="svg-icon icon-folder"></span>Testes</a>
+                            </span><span class="post-meta-date meta-item">
+                                <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2021-01-27">2021-01-27</time>
+                            </span><span class="post-meta-words meta-item">
+                                <span class="svg-icon icon-pencil"></span>227 palavras
+                            </span>
+                            <span class="post-meta-reading meta-item">
+                                <span class="svg-icon icon-stopwatch"></span>2 minutos
+                            </span>
+                        </div>
 
-        <div class="post"><div class="image-theme-classic">
-                <img src="/posts/unit-tests-argument-captor/featured-image.png" style="width: 100%">
-            </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Conteúdos</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+
+                </header>
+
+        <div class="article-post toc-start">
+
+            <div class="content-block content-block-first content-block-position">
+
+                <div class="post single"><div class="image-theme-classic">
+                        <img src="https://augustocolombelli.com/posts/unit-tests-argument-captor/featured-image.png" style="width: 100%">
+                    </div><div class="details toc" id="toc-static"  data-kept="">
+                        <div class="details-summary toc-title">
+                            <span>Conteúdos</span>
+                        </div>
+                        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#como-esse-recurso-pode-ser-útil">Como esse recurso pode ser útil?</a></li>
     <li><a href="#como-adicionar-no-projeto">Como adicionar no projeto?</a></li>
@@ -132,15 +161,12 @@
     </li>
   </ul>
 </nav></div>
-            </div><p>Photo by <a href="https://unsplash.com/@korpa?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Jr Korpa</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
-<h1 id="testes-unitários---argument-captor">Testes Unitários - Argument Captor</h1>
-<h2 id="como-esse-recurso-pode-ser-útil">Como esse recurso pode ser útil?</h2>
-<p>Argument Captor é um ótimo recurso que pode ser utilizado para realizar testes em objetos que são passados como parâmetros em métodos que estão em seu código..</p>
+                    </div><p>Photo by <a href="https://unsplash.com/@korpa?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Jr Korpa</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+<h1 id="testes-unitários---argument-captor" class="headerLink"><a href="#testes-unit%c3%a1rios---argument-captor" class="header-mark"></a>Testes Unitários - Argument Captor</h1><h2 id="como-esse-recurso-pode-ser-útil" class="headerLink"><a href="#como-esse-recurso-pode-ser-%c3%batil" class="header-mark"></a>Como esse recurso pode ser útil?</h2><p>Argument Captor é um ótimo recurso que pode ser utilizado para realizar testes em objetos que são passados como parâmetros em métodos que estão em seu código..</p>
 <p>É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto, utilizando por exemplo, um teste funcional.</p>
 <p>Ele ajuda a verificar o estado do objeto após longas execuções de código, que em muitas vezes, podem estar repleto de condicionais que o afetam.</p>
-<h2 id="como-adicionar-no-projeto">Como adicionar no projeto?</h2>
-<p>Para utilizá-lo, é necessário adicionar as bibliotecas do JUnit e do Mockito ao seu projeto. Utilizando o Maven, isso pode ser feito adicionando as seguintes dependências no arquivo pom.xml.</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<h2 id="como-adicionar-no-projeto" class="headerLink"><a href="#como-adicionar-no-projeto" class="header-mark"></a>Como adicionar no projeto?</h2><p>Para utilizá-lo, é necessário adicionar as bibliotecas do JUnit e do Mockito ao seu projeto. Utilizando o Maven, isso pode ser feito adicionando as seguintes dependências no arquivo pom.xml.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>4.13.1<span class="nt">&lt;/version&gt;</span>
@@ -153,13 +179,12 @@
     <span class="nt">&lt;version&gt;</span>1.10.19<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="como-utilizar">Como utilizar?</h2>
-<p>Para utilizar, é necessário importar as classes responsáveis por fazer a captura e também o recurso de verificação do Mockito. São eles:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import static</span> <span class="nn">org.mockito.ArgumentCaptor.forClass</span><span class="o">;</span>
+</code></pre></div><h2 id="como-utilizar" class="headerLink"><a href="#como-utilizar" class="header-mark"></a>Como utilizar?</h2><p>Para utilizar, é necessário importar as classes responsáveis por fazer a captura e também o recurso de verificação do Mockito. São eles:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">import static</span> <span class="nn">org.mockito.ArgumentCaptor.forClass</span><span class="o">;</span>
 <span class="kn">import static</span> <span class="nn">org.mockito.Mockito.verify</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.mockito.ArgumentCaptor</span><span class="o">;</span>
 </code></pre></div><p>No teste unitário, iniciar o o ArgumentCaptor, executar o processamento do service, fazer a captura do objeto e finalizar testando o objeto capturado, conforme demonstrado no exemplo abaixo.</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Test</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Test</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldSendBillByEmailWithNewQuantity</span><span class="o">()</span> <span class="o">{</span>
   <span class="n">Double</span> <span class="n">valueExpectedAfterApplyTheRule</span> <span class="o">=</span> <span class="n">110</span><span class="o">.</span><span class="na">0</span><span class="o">;</span>
 
@@ -176,33 +201,43 @@
 
   <span class="n">Assert</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span><span class="n">valueExpectedAfterApplyTheRule</span><span class="o">,</span> <span class="n">billcaptured</span><span class="o">.</span><span class="na">getValue</span><span class="o">().</span><span class="na">getQuantity</span><span class="o">());</span>
 <span class="o">}</span>
-</code></pre></div><h3 id="fontes-do-projeto">Fontes do projeto</h3>
-<p><a href="https://github.com/augustocolombelli/unit-tests-argument-captor">https://github.com/augustocolombelli/unit-tests-argument-captor</a></p>
-</div>
+</code></pre></div><h3 id="fontes-do-projeto" class="headerLink"><a href="#fontes-do-projeto" class="header-mark"></a>Fontes do projeto</h3><p><a href="https://github.com/augustocolombelli/unit-tests-argument-captor" target="_blank" rel="noopener noreffer">https://github.com/augustocolombelli/unit-tests-argument-captor</a></p>
+</div><footer>
+                        <div class="post">
 
-            <div class="post"><div class="post-info-share">
-    <span></span>
-</div><div class="post-footer" id="post-footer"><div class="post-navigation">
-        <div class="post-nav-box nav-box-next">
-            <a class="nav-box" href="/posts/design-pattern-strategy/"><div style="padding-right: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">Design Pattern - Strategy</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
-        </div></div></div>
-</div>
+
+<div class="post-share"></div>
+
+
+
+
+
+
+<div class="post-tags"><a href="/tags/testes-unitarios/" class="tag">testes-unitarios</a><a href="/tags/java/" class="tag">java</a><a href="/tags/junit/" class="tag">junit</a></div></div>
+                </footer></div>
+
+        <div id="toc-final"></div>
         </div>
-    <div id="toc-final"></div>
-    </article><div class=" post-tags post-tags-toc "><a href="/tags/testes-unitarios/" class="tag">testes-unitarios</a><a href="/tags/java/" class="tag">java</a><a href="/tags/junit/" class="tag">junit</a></div><div class="page single comments content-block-position"><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+
+    
+    </article>
+    <section class="page single comments content-block-position">
+        <h1 class="display-hidden">Комментарии</h1><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div></main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+            </noscript></div></section></div>
+
+</main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Tema - <a href="https://ublogger.netlify.app/?utm_source=https://augustocolombelli.com/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
-                <i class="fas fa-arrow-up fa-fw"></i>
+        <aside id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="svg-icon icon-arrow-up"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script><script>
+        </aside><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script>
                 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
                 gtag('config', 'G-D0E03R1P6Q');
             </script><script src="https://www.googletagmanager.com/gtag/js?id=G-D0E03R1P6Q" async></script></body>

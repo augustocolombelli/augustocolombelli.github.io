@@ -2,21 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Transparência com gráfico de burndown | </title><meta name="Description" content=""><meta property="og:title" content="Transparência com gráfico de burndown" />
-<meta property="og:description" content="Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://augustocolombelli.com/posts/transparency-with-burndown/" />
-<meta property="og:image" content="https://augustocolombelli.com/posts/transparency-with-burndown/featured-image.png"/>
-<meta property="article:published_time" content="2021-02-04T07:49:54-03:00" />
-<meta property="article:modified_time" content="2021-02-04T07:49:54-03:00" />
-<meta name="twitter:card" content="summary_large_image"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>Transparência com gráfico de burndown | </title><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://augustocolombelli.com/posts/transparency-with-burndown/featured-image.png"/>
 <meta name="twitter:title" content="Transparência com gráfico de burndown"/>
-<meta name="twitter:description" content="Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto."/>
+<meta name="twitter:description" content=""/><meta name="twitter:creator" content="@colombellibr"/><meta name="Description" content=""><meta property="og:title" content="Transparência com gráfico de burndown" />
+<meta property="og:description" content="Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://augustocolombelli.com/posts/transparency-with-burndown/" /><meta property="og:image" content="https://augustocolombelli.com/posts/transparency-with-burndown/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-04T07:49:54-03:00" />
+<meta property="article:modified_time" content="2021-02-04T07:49:54-03:00" />
+
 <meta name="application-name" content="Dev Blog">
-<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/transparency-with-burndown/" /><link rel="prev" href="https://augustocolombelli.com/posts/user-stories-theory-practice/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.com/posts/transparency-with-burndown/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lib/prismjs/prism.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -30,13 +27,8 @@
                             "url": "https:\/\/augustocolombelli.com\/posts\/transparency-with-burndown\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "agile, processos, indicadores, transparência, software, burndown","wordCount":  1078 ,
-        "url": "https:\/\/augustocolombelli.com\/posts\/transparency-with-burndown\/","datePublished": "2021-02-04T07:49:54-03:00","dateModified": "2021-02-04T07:49:54-03:00","publisher": {
-            "@type": "Organization",
-            "name": "Autor"},"author": {
-                "@type": "Person",
-                "name": "Autor"
-            },"description": ""
+                        }],"genre": "posts","keywords": "agile, processos, indicadores, transparência, software, burndown","wordCount":  1073 ,
+        "url": "https:\/\/augustocolombelli.com\/posts\/transparency-with-burndown\/","datePublished": "2021-02-04T07:49:54-03:00","dateModified": "2021-02-04T07:49:54-03:00","description": ""
     }
     </script><script type="application/ld+json">
     {
@@ -61,67 +53,104 @@
 </script></head>
     <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Home" class="header-logo">Home</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                    <i class="fas fa-adjust fa-fw"></i>
+        <div id="mask"></div><div class="wrapper"><header>
+    <div class="desktop header" id="header-desktop">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Home" class="header-logo logo-svg">Home</a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul class="menu-inner"><li>
+                            <a class="menu-item" href="/posts/"> Posts </a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/"> Tags </a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/"> Categorias </a>
+                        </li></ul>
+                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Home" class="header-logo">Home</a>
+    </div><div class="mobile header" id="header-mobile">
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <a href="/" title="Home" class="header-logo">Home</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle-mobile">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="menu" id="menu-mobile"><nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul><li>
+                            <a class="menu-item" href="/posts/" title="">Posts</a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/" title="">Tags</a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/" title="">Categorias</a>
+                        </li></ul>
+                </nav>
+                <a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <span class="svg-icon icon-moon"></span>
+                </a></div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
-    </div>
-</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+    </div></header><main class="main">
+<div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
             <div class="toc-title">Conteúdos</div>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><div class="header-post">
-        <div class="post-title">
-
-            <div class="post-all-meta">
-            <div class="breadcrumbs">
-    <a href="/">Home </a>/ <a href="/categories/times-e-processos/">Times e Processos </a>/ <a href="/"> Transparência com gráfico de burndown </a>
-</div>
-            <h1 class="single-title animated flipInX">Transparência com gráfico de burndown</h1><div class="post-meta">
-                <div class="post-meta-line"><span class="post-category">
-                                <a href="/categories/times-e-processos/"><i class="far fa-folder fa-fw"></i>&nbsp;Times e Processos</a>
-                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-02-04">2021-02-04</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1078 palavras
-                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;6 minutos</div>
-            </div>
         </div>
 
+    
+    
+    <article>
+    
 
-    </div>
+        <header class="header-post">
 
-    </div>
+            
 
-        <article class="single toc-start">
+            
+            <div class="post-title">
 
-        <div class="content-block content-block-first content-block-position">
+                    <div class="post-all-meta">
+                        <nav class="breadcrumbs">
+    <ol>
+        <li><a href="/">Home </a></li><li><a href="/categories/times-e-processos/">Times e Processos </a></li><li>Transparência com gráfico de burndown</li>
+    </ol>
+</nav>
+                        <h1 class="single-title flipInX">Transparência com gráfico de burndown</h1><div class="post-meta summary-post-meta"><span class="post-category meta-item">
+                                <a href="/categories/times-e-processos/"><span class="svg-icon icon-folder"></span>Times e Processos</a>
+                            </span><span class="post-meta-date meta-item">
+                                <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2021-02-04">2021-02-04</time>
+                            </span><span class="post-meta-words meta-item">
+                                <span class="svg-icon icon-pencil"></span>1073 palavras
+                            </span>
+                            <span class="post-meta-reading meta-item">
+                                <span class="svg-icon icon-stopwatch"></span>6 minutos
+                            </span>
+                        </div>
 
-        <div class="post"><div class="image-theme-classic">
-                <img src="/posts/transparency-with-burndown/featured-image.png" style="width: 100%">
-            </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Conteúdos</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+
+                </header>
+
+        <div class="article-post toc-start">
+
+            <div class="content-block content-block-first content-block-position">
+
+                <div class="post single"><div class="image-theme-classic">
+                        <img src="https://augustocolombelli.com/posts/transparency-with-burndown/featured-image.png" style="width: 100%">
+                    </div><div class="details toc" id="toc-static"  data-kept="">
+                        <div class="details-summary toc-title">
+                            <span>Conteúdos</span>
+                        </div>
+                        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#como-utilizar-no-projeto">Como utilizar no projeto?</a>
       <ul>
@@ -132,12 +161,10 @@
     <li><a href="#conclusão">Conclusão</a></li>
   </ul>
 </nav></div>
-            </div><p>Photo by <a href="https://unsplash.com/@korpa?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Jr Korpa</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
-<h1 id="transparência-com-gráfico-de-burndown">Transparência com gráfico de burndown</h1>
-<p>Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto.</p>
+                    </div><p>Photo by <a href="https://unsplash.com/@korpa?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Jr Korpa</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+<h1 id="transparência-com-gráfico-de-burndown" class="headerLink"><a href="#transpar%c3%aancia-com-gr%c3%a1fico-de-burndown" class="header-mark"></a>Transparência com gráfico de burndown</h1><p>Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto.</p>
 <p>O Burndown é um ótimo recurso que permite visualizar o progresso de um projeto com um indicador simples e de fácil compreensão. É uma maneira eficaz de transparecer ao Product Owner (PO) e demais envolvidos como está o andamento da implementação de alguma nova funcionalidade no produto.</p>
-<h2 id="como-utilizar-no-projeto">Como utilizar no projeto?</h2>
-<p>Alguns dados são necessários para elaborar e acompanhar um gráfico Burndown. Para demonstrar isso, vamos utilizar um exemplo simples envolvendo o desenvolvimento de uma nova funcionalidade por um time composto pelo Product Owner (PO) e 5 desenvolvedores. Esse time é responsável por evoluir e manter um sistema de controle de frete.</p>
+<h2 id="como-utilizar-no-projeto" class="headerLink"><a href="#como-utilizar-no-projeto" class="header-mark"></a>Como utilizar no projeto?</h2><p>Alguns dados são necessários para elaborar e acompanhar um gráfico Burndown. Para demonstrar isso, vamos utilizar um exemplo simples envolvendo o desenvolvimento de uma nova funcionalidade por um time composto pelo Product Owner (PO) e 5 desenvolvedores. Esse time é responsável por evoluir e manter um sistema de controle de frete.</p>
 <p>Está previsto no backlog da equipe criar uma nova funcionalidade que permite aos usuários fazer cotações das melhores opções para transporte de carga. A partir da necessidade levantada com os usuários e diversas reuniões de refinamento do backlog, a equipe chegou a um escopo que permite trabalhar em uma primeira versão da funcionalidade. Não existe uma estimativa precisa de quanto tempo levará para desenvolver essa nova funcionalidade, porém a equipe acredita que será necessário no mínimo cinco semanas.</p>
 <p>Com o escopo inicial em mãos, a equipe dividiu esse grande entregável em partes menores. Para isso, criou pequenas user stories (para entender um pouco mais sobre user stories, ver o artigo <a href="https://augustocolombelli.com/posts/user-stories-theory-practice/" target="_blank" rel="noopener noreffer">User Story — Teoria e prática</a>), chegando a seguinte lista:</p>
 <ul>
@@ -152,25 +179,22 @@
 <li>Deve integrar com o modulo financeiro, permitindo gerar contas a pagar para os transportes já definidos;</li>
 <li>Deve permitir notificar as demais transportadoras quando já tiver sido escolhida a transportadora que vai fazer a entrega;</li>
 </ul>
-<h3 id="criação-do-burndown">Criação do Burndown</h3>
-<p>A partir de agora é necessário criarmos uma planilha para começarmos a elaborar o nosso gráfico Burndown. O primeiro passo é passar a lista de user stories para a planilha e adicionar uma coluna para representar a situação de cada item. As situações possíveis são:</p>
+<h3 id="criação-do-burndown" class="headerLink"><a href="#cria%c3%a7%c3%a3o-do-burndown" class="header-mark"></a>Criação do Burndown</h3><p>A partir de agora é necessário criarmos uma planilha para começarmos a elaborar o nosso gráfico Burndown. O primeiro passo é passar a lista de user stories para a planilha e adicionar uma coluna para representar a situação de cada item. As situações possíveis são:</p>
 <ul>
 <li>Pending: Itens que ainda não foram iniciados;</li>
 <li>In progress: Itens que já foram iniciados o desenvolvimento;</li>
 <li>Finished: Itens que já foram concluídos.</li>
 </ul>
-<figure>
-    <img src="items-list-with-status.png"
-         alt="Figura 1 — Lista de itens do backlog com status."/> <figcaption>
+<figure><img src="items-list-with-status.png"
+         alt="Figura 1 — Lista de itens do backlog com status."/><figcaption>
             <p>Figura 1 — Lista de itens do backlog com status.</p>
         </figcaption>
 </figure>
 
 <hr>
 <p>Para acompanharmos o projeto, precisamos saber a situação atual dos itens do backlog. Isso pode ser feito obtendo a soma dos itens do backlog por situação, como demonstrado na figura abaixo. Essas informações são importantes, pois serão utilizadas para atualizar o Burndown.</p>
-<figure>
-    <img src="totals-items.png"
-         alt="Figura 2 — Totalização dos itens por situação."/> <figcaption>
+<figure><img src="totals-items.png"
+         alt="Figura 2 — Totalização dos itens por situação."/><figcaption>
             <p>Figura 2 — Totalização dos itens por situação.</p>
         </figcaption>
 </figure>
@@ -179,85 +203,89 @@
 <p>O próximo passo é gerar a linha do tempo a ser acompanhado com o indicador. Para isso, é necessário ter a data inicial e a data estimada para conclusão.</p>
 <p>É muito importante que a data estimada seja flexível, pois eventuais riscos não levantados podem impactar o escopo do projeto. Quando isso acontece, é comum que seja &ldquo;colocado em xeque&rdquo; a qualidade das entregas. Sempre que possível evite que isso aconteça! Não sacrifique a qualidade das suas entregas, pois cedo ou tarde você precisará correr atrás do prejuízo. Em vez de sacrificar a qualidade, considere remover temporariamente alguns itens do backlog ou negociar com os stakeholders uma nova data.</p>
 <p>A data estimada para entrega deve servir apenas como uma maneira para &ldquo;medir a febre&rdquo;. Em nosso exemplo, estamos considerando 5 semanas trabalhando em um total de 10 itens. Dividindo o total de itens pelo número de semanas, chegamos a um total de duas user stories por semana. Essas informações devem ser passadas para a planilha como demonstrado na figura abaixo.</p>
-<figure>
-    <img src="monitoring.png"
-         alt="Figura 3 — Linha do tempo com estimado e realizado."/> <figcaption>
+<figure><img src="monitoring.png"
+         alt="Figura 3 — Linha do tempo com estimado e realizado."/><figcaption>
             <p>Figura 3 — Linha do tempo com estimado e realizado.</p>
         </figcaption>
 </figure>
 
 <hr>
 <p>O gráfico Burndown é gerado utilizando as colunas &ldquo;Estimated&rdquo; e &ldquo;Actual&rdquo;, como demonstrado na figura abaixo.
-<figure>
-    <img src="burndown-chart.png"
-         alt="Figura 4 — Gráfico de Burndown."/> <figcaption>
+<figure><img src="burndown-chart.png"
+         alt="Figura 4 — Gráfico de Burndown."/><figcaption>
             <p>Figura 4 — Gráfico de Burndown.</p>
         </figcaption>
 </figure>
 </p>
-<h3 id="atualização-do-burndown">Atualização do Burndown</h3>
-<p>O acompanhamento pode ser feito no último dia da iteração, em nosso exemplo optamos por atualizar o gráfico na sexta-feira. Isso permite que o time saiba a situação atual do projeto antes de iniciar a próxima iteração. Na figura abaixo é simulado uma semana que o time finalizou todas os itens planejados para a semana, adiantando um item da próxima.
-<figure>
-    <img src="first-week-status-tasks.png"
-         alt="Figura 5 - Primeira semana de acompanhamento."/> <figcaption>
+<h3 id="atualização-do-burndown" class="headerLink"><a href="#atualiza%c3%a7%c3%a3o-do-burndown" class="header-mark"></a>Atualização do Burndown</h3><p>O acompanhamento pode ser feito no último dia da iteração, em nosso exemplo optamos por atualizar o gráfico na sexta-feira. Isso permite que o time saiba a situação atual do projeto antes de iniciar a próxima iteração. Na figura abaixo é simulado uma semana que o time finalizou todas os itens planejados para a semana, adiantando um item da próxima.
+<figure><img src="first-week-status-tasks.png"
+         alt="Figura 5 - Primeira semana de acompanhamento."/><figcaption>
             <p>Figura 5 - Primeira semana de acompanhamento.</p>
         </figcaption>
 </figure>
 </p>
 <p>Com a atualização do indicador, ele ficará da seguinte maneira.
-<figure>
-    <img src="first-week-ok.png"
-         alt="Figura 6 - Atualização do indicador."/> <figcaption>
+<figure><img src="first-week-ok.png"
+         alt="Figura 6 - Atualização do indicador."/><figcaption>
             <p>Figura 6 - Atualização do indicador.</p>
         </figcaption>
 </figure>
 </p>
 <hr>
 <p>Quando o Burndown nos sinalizar atraso, é o momento da equipe analisar quais ações podem ser realizadas. Como demonstrado na figura abaixo, estamos na última semana e temos 4 itens não finalizados.
-<figure>
-    <img src="last-week-problems.png"
-         alt="Figura 7 — Atraso na última semana."/> <figcaption>
+<figure><img src="last-week-problems.png"
+         alt="Figura 7 — Atraso na última semana."/><figcaption>
             <p>Figura 7 — Atraso na última semana.</p>
         </figcaption>
 </figure>
 </p>
 <hr>
 <p>Em nosso exemplo, o time optou por fazer um replanejamento e notificar os stakeholders que será necessário mais uma semana. Isso pode ser visualizado na semana do dia 06/03 que a quantidade de itens estimados não teve alteração. Foi adicionado também uma nova linha incluindo uma nova semana, com isso a data de prevista de entrega mudou para 20/03.<br>
-<figure>
-    <img src="replanning.png"
-         alt="Figura 8 — Replanejamento das entregas."/> <figcaption>
+<figure><img src="replanning.png"
+         alt="Figura 8 — Replanejamento das entregas."/><figcaption>
             <p>Figura 8 — Replanejamento das entregas.</p>
         </figcaption>
 </figure>
 </p>
-<h2 id="conclusão">Conclusão</h2>
-<p>Caso você opte por utilizar o gráfico de Burndown com a sua equipe e durante o uso perceber que ele está indicando eventuais atrasos, isso não significa que o time deverá abrir mão da qualidade e começar fazer as coisas mais rápido para &ldquo;entregar na data&rdquo;. Isso significa que chegou o momento que o time precisa se reunir e discutir quais ações devem ser feitas para mitigar o risco em questão. Sempre é importante lembrar, esse é um indicador gerado a partir de estimativas. Estimativas são apenas estimativas, então é comum que existam falhas nela.</p>
+<h2 id="conclusão" class="headerLink"><a href="#conclus%c3%a3o" class="header-mark"></a>Conclusão</h2><p>Caso você opte por utilizar o gráfico de Burndown com a sua equipe e durante o uso perceber que ele está indicando eventuais atrasos, isso não significa que o time deverá abrir mão da qualidade e começar fazer as coisas mais rápido para &ldquo;entregar na data&rdquo;. Isso significa que chegou o momento que o time precisa se reunir e discutir quais ações devem ser feitas para mitigar o risco em questão. Sempre é importante lembrar, esse é um indicador gerado a partir de estimativas. Estimativas são apenas estimativas, então é comum que existam falhas nela.</p>
 <p>O Burndown é uma ferramenta muito poderosa que nos ajuda transparecer a situação atual das entregas que estamos trabalhando. Quando utilizado de forma correta, permite que a equipe identifique com antecedência eventuais impactos na data planejada e trabalhe em ações que ajudem a mitigá-los.</p>
 <p>O exemplo utilizado nesse artigo está disponível nesse <a href="https://docs.google.com/spreadsheets/d/1EttOSLx-OXylrHTW1HOFSstiCAkIUv0hZQ8Oh9PBK-8/edit?usp=sharing" target="_blank" rel="noopener noreffer">link</a>.</p>
-</div>
+</div><footer>
+                        <div class="post">
 
-            <div class="post"><div class="post-info-share">
-    <span></span>
-</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
-            <a class="nav-box" href="/posts/user-stories-theory-practice/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Próximo artigo</div><span class="nav-text">User Story — Teoria e prática</span></div></a>
-        </div></div></div>
-</div>
+
+<div class="post-share"></div>
+
+
+
+
+
+
+<div class="post-tags"><a href="/tags/agile/" class="tag">agile</a><a href="/tags/processos/" class="tag">processos</a><a href="/tags/indicadores/" class="tag">indicadores</a><a href="/tags/transpar%C3%AAncia/" class="tag">transparência</a><a href="/tags/software/" class="tag">software</a><a href="/tags/burndown/" class="tag">burndown</a></div></div>
+                </footer></div>
+
+        <div id="toc-final"></div>
         </div>
-    <div id="toc-final"></div>
-    </article><div class=" post-tags post-tags-toc "><a href="/tags/agile/" class="tag">agile</a><a href="/tags/processos/" class="tag">processos</a><a href="/tags/indicadores/" class="tag">indicadores</a><a href="/tags/transpar%C3%AAncia/" class="tag">transparência</a><a href="/tags/software/" class="tag">software</a><a href="/tags/burndown/" class="tag">burndown</a></div><div class="page single comments content-block-position"><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+
+    
+    </article>
+    <section class="page single comments content-block-position">
+        <h1 class="display-hidden">Комментарии</h1><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
-            </noscript></div></div></div></main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+            </noscript></div></section></div>
+
+</main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Tema - <a href="https://ublogger.netlify.app/?utm_source=https://augustocolombelli.com/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
-                <i class="fas fa-arrow-up fa-fw"></i>
+        <aside id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="svg-icon icon-arrow-up"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script><script>
+        </aside><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script>
                 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
                 gtag('config', 'G-D0E03R1P6Q');
             </script><script src="https://www.googletagmanager.com/gtag/js?id=G-D0E03R1P6Q" async></script></body>
