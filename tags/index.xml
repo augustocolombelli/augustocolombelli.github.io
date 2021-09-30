@@ -3,7 +3,21 @@
         <title>Tags - Tag - Home</title>
         <link>https://augustocolombelli.com/tags/</link>
         <description>Tags - Tag - Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Feb 2021 07:49:54 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 Mar 2021 07:50:37 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>git</title>
+    <link>https://augustocolombelli.com/tags/git/</link>
+    <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.com/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>programação</title>
+    <link>https://augustocolombelli.com/tags/programa%C3%A7%C3%A3o/</link>
+    <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
+    <author>Autor</author>
+    <guid>https://augustocolombelli.com/tags/programa%C3%A7%C3%A3o/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>agile</title>
     <link>https://augustocolombelli.com/tags/agile/</link>
     <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
@@ -58,20 +72,6 @@
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
     <guid>https://augustocolombelli.com/tags/java/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>junit</title>
-    <link>https://augustocolombelli.com/tags/junit/</link>
-    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
-    <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/junit/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>testes-unitarios</title>
-    <link>https://augustocolombelli.com/tags/testes-unitarios/</link>
-    <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
-    <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/testes-unitarios/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
