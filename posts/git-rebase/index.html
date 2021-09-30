@@ -27,7 +27,7 @@
                             "url": "https:\/\/augustocolombelli.com\/posts\/git-rebase\/featured-image.png",
                             "width":  640 ,
                             "height":  427 
-                        }],"genre": "posts","keywords": "git, programação","wordCount":  796 ,
+                        }],"genre": "posts","keywords": "git, programação","wordCount":  795 ,
         "url": "https:\/\/augustocolombelli.com\/posts\/git-rebase\/","datePublished": "2021-03-02T07:50:37-03:00","dateModified": "2021-03-02T07:50:37-03:00","description": ""
     }
     </script><script type="application/ld+json">
@@ -127,7 +127,7 @@
                             </span><span class="post-meta-date meta-item">
                                 <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2021-03-02">2021-03-02</time>
                             </span><span class="post-meta-words meta-item">
-                                <span class="svg-icon icon-pencil"></span>796 palavras
+                                <span class="svg-icon icon-pencil"></span>795 palavras
                             </span>
                             <span class="post-meta-reading meta-item">
                                 <span class="svg-icon icon-stopwatch"></span>4 minutos
@@ -152,9 +152,11 @@
                         </div>
                         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#simulando-o-rebase">Simulando o rebase</a>
       <ul>
-        <li><a href="#simulando-o-rebase">Simulando o rebase</a></li>
+        <li><a href="#inclusão-de-um-arquivo-texto-simples">Inclusão de um arquivo texto simples</a></li>
+        <li><a href="#criação-do-branch-para-simular-o-rebase">Criação do branch para simular o rebase</a></li>
+        <li><a href="#atualização-do-main-com-novos-commits">Atualização do <code>main</code> com novos commits</a></li>
       </ul>
     </li>
   </ul>
@@ -162,7 +164,7 @@
                     </div><p>Photo by <a href="https://unsplash.com/@raimondklavins?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Raimond Klavins</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
 <h1 id="git---sincronização-com-rebasing" class="headerLink"><a href="#git---sincroniza%c3%a7%c3%a3o-com-rebasing" class="header-mark"></a>Git - Sincronização com Rebasing</h1><p>É comum no dia a dia do desenvolvedor precisar lidar com o desenvolvimentos de diversos tamanhos. Alguns são pequenos e levam de poucas horas, outros acabam sendo um pouco maiores e exigem alguns dias de desenvolvimento.</p>
 <p>Em ambos os casos, garantir que o código fonte esteja sincronizado é fundamental pois ajuda a evitar conflitos futuros ao submetermos o código para o branch principal. Isso se torna ainda mais importante quando trabalhamos em projetos em que muitas pessoas e times também atuam sobre o mesmo código fonte. O Git possui duas maneiras que permitem isso: o merge; e o rebase. Para ambos, existem muitos materiais que auxiliam na compreensão de qual estratégia é a melhor a ser utilizada, <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" target="_blank" rel="noopener noreffer">Git Branching - Rebasing</a> é um bom exemplo. Nesse post, escrevo um pouco sobre o rebase e como utilizá-lo para manter um branch atualizado.</p>
-<h3 id="simulando-o-rebase" class="headerLink"><a href="#simulando-o-rebase" class="header-mark"></a>Simulando o rebase</h3><h4 id="inclusão-de-um-arquivo-texto-simples" class="headerLink"><a href="#inclus%c3%a3o-de-um-arquivo-texto-simples" class="header-mark"></a>Inclusão de um arquivo texto simples</h4><p>Para simular o rebase, vamos criar um projeto simples com alguns arquivos <code>.txt</code>. Nesses arquivos serão incluídos alguns textos aleatórios, por exemplo, nome de cores, carros e cidades. A inclusão e atualização desses arquivos serão realizados com ramificações geradas a partir da árvore principal (<code>main</code>).</p>
+<h2 id="simulando-o-rebase" class="headerLink"><a href="#simulando-o-rebase" class="header-mark"></a>Simulando o rebase</h2><h3 id="inclusão-de-um-arquivo-texto-simples" class="headerLink"><a href="#inclus%c3%a3o-de-um-arquivo-texto-simples" class="header-mark"></a>Inclusão de um arquivo texto simples</h3><p>Para simular o rebase, vamos criar um projeto simples com alguns arquivos <code>.txt</code>. Nesses arquivos serão incluídos alguns textos aleatórios, por exemplo, nome de cores, carros e cidades. A inclusão e atualização desses arquivos serão realizados com ramificações geradas a partir da árvore principal (<code>main</code>).</p>
 <p>Nesse exemplo estou utilizando um repositório remoto no Github, então é necessário que ele também esteja criado e pronto para receber as alterações. Com o repositório remoto pronto, o próximo passo é criar um novo repositório local e referenciar para o remoto, como demonstrado nos comandos abaixo.</p>
 <pre><code class="language-git" data-lang="git">$ git init
 $ touch .gitignore
@@ -188,7 +190,7 @@ $ git push origin main
 <figure><img src="status-repository-after-first-branch.png"/>
 </figure>
 </p>
-<h4 id="criação-do-branch-para-simular-o-rebase" class="headerLink"><a href="#cria%c3%a7%c3%a3o-do-branch-para-simular-o-rebase" class="header-mark"></a>Criação do branch para simular o rebase</h4><p>Afim de simular o rebase, vamos criar um novo branch com o nome <code>feature-2-rebase-test-creating-cars-file</code>. Nele incluiremos um novo arquivo de texto <code>cars.txt</code> com uma lista aleatório de nome de carros, como demonstrado abaixo.</p>
+<h3 id="criação-do-branch-para-simular-o-rebase" class="headerLink"><a href="#cria%c3%a7%c3%a3o-do-branch-para-simular-o-rebase" class="header-mark"></a>Criação do branch para simular o rebase</h3><p>Afim de simular o rebase, vamos criar um novo branch com o nome <code>feature-2-rebase-test-creating-cars-file</code>. Nele incluiremos um novo arquivo de texto <code>cars.txt</code> com uma lista aleatório de nome de carros, como demonstrado abaixo.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">1 - Gol
 2 - Mustang
 3 - Jaguar
@@ -210,11 +212,10 @@ $ git commit -m &quot;Add Amarok&quot;
 </code></pre><p>Após fazer a inclusão dos 3 carros no arquivo em commits diferentes, o próximo passo é fazer o push.</p>
 <pre><code class="language-git" data-lang="git">$ git push origin &quot;feature-2-rebase-test-creating-cars-file&quot;
 </code></pre><p>Concluído, a situação do repositório ficará conforme demonstrado na imagem abaixo.
-ååå
 <figure><img src="including-3-cars-feature-for-rebase.png"/>
 </figure>
 </p>
-<h4 id="atualização-do-main-com-novos-commits" class="headerLink"><a href="#atualiza%c3%a7%c3%a3o-do-main-com-novos-commits" class="header-mark"></a>Atualização do <code>main</code> com novos commits</h4><p>Para visualizar os benefícios do rebase, criaremos duas novas ramificações a partir da <code>main</code>. Em uma delas adicionaremos mais cores e na outra incluiremos um novo arquivo. Os nomes delas são: <code>feature-3-add-new-colors</code> e <code>feature-4-add-cities-file</code>. Os comandos para fazer isso são os mesmos já apresentados anteriormente. Feito isso, o branch <code>feature-2-rebase-test-creating-cars-file</code> utilizado para praticar o rebase começa a ficar desatualizado, como demonstrado abaixo.
+<h3 id="atualização-do-main-com-novos-commits" class="headerLink"><a href="#atualiza%c3%a7%c3%a3o-do-main-com-novos-commits" class="header-mark"></a>Atualização do <code>main</code> com novos commits</h3><p>Para visualizar os benefícios do rebase, criaremos duas novas ramificações a partir da <code>main</code>. Em uma delas adicionaremos mais cores e na outra incluiremos um novo arquivo. Os nomes delas são: <code>feature-3-add-new-colors</code> e <code>feature-4-add-cities-file</code>. Os comandos para fazer isso são os mesmos já apresentados anteriormente. Feito isso, o branch <code>feature-2-rebase-test-creating-cars-file</code> utilizado para praticar o rebase começa a ficar desatualizado, como demonstrado abaixo.
 <figure><img src="project-after-two-branchs.png"/>
 </figure>
 </p>
