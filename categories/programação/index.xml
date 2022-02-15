@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Programação - Categoria - Home</title>
-        <link>https://augustocolombelli.com/categories/programa%C3%A7%C3%A3o/</link>
+        <link>https://augustocolombelli.github.io/categories/programa%C3%A7%C3%A3o/</link>
         <description>Programação - Categoria - Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 Mar 2021 07:50:37 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/categories/programa%C3%A7%C3%A3o/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 02 Mar 2021 07:50:37 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/categories/programa%C3%A7%C3%A3o/" rel="self" type="application/rss+xml" /><item>
     <title>Git - Sincronização com Rebasing</title>
-    <link>https://augustocolombelli.com/posts/git-rebase/</link>
+    <link>https://augustocolombelli.github.io/posts/git-rebase/</link>
     <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/git-rebase/</guid>
+    <guid>https://augustocolombelli.github.io/posts/git-rebase/</guid>
     <description><![CDATA[Garantir que o código fonte esteja sincronizado é fundamental pois ajuda a evitar conflitos futuros ao submetermos o código para o branch principal. O Git possui duas maneiras que permitem isso: o merge; e o rebase.]]></description>
 </item></channel>
 </rss>

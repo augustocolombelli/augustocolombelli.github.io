@@ -1,49 +1,49 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Todos Posts - Home</title>
-        <link>https://augustocolombelli.com/posts/</link>
+        <link>https://augustocolombelli.github.io/posts/</link>
         <description>Todos Posts | Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>User Story - Definition of Ready e Definition of Done</title>
-    <link>https://augustocolombelli.com/posts/dod-dor/</link>
+    <link>https://augustocolombelli.github.io/posts/dod-dor/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/dod-dor/</guid>
+    <guid>https://augustocolombelli.github.io/posts/dod-dor/</guid>
     <description><![CDATA[Em equipes ágeis que inspecionam e adaptam os seus processos de maneira recorrente, existem dois tipos de acordo que auxiliam na transparência do fluxo, reduzindo assim a necessidade de processos pesados e burocráticos, são eles o Definition of Ready (DoR) e o Definition of Done (DoD).]]></description>
 </item><item>
     <title>Git - Sincronização com Rebasing</title>
-    <link>https://augustocolombelli.com/posts/git-rebase/</link>
+    <link>https://augustocolombelli.github.io/posts/git-rebase/</link>
     <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/git-rebase/</guid>
+    <guid>https://augustocolombelli.github.io/posts/git-rebase/</guid>
     <description><![CDATA[Garantir que o código fonte esteja sincronizado é fundamental pois ajuda a evitar conflitos futuros ao submetermos o código para o branch principal. O Git possui duas maneiras que permitem isso: o merge; e o rebase.]]></description>
 </item><item>
     <title>Transparência com gráfico de burndown</title>
-    <link>https://augustocolombelli.com/posts/transparency-with-burndown/</link>
+    <link>https://augustocolombelli.github.io/posts/transparency-with-burndown/</link>
     <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/transparency-with-burndown/</guid>
+    <guid>https://augustocolombelli.github.io/posts/transparency-with-burndown/</guid>
     <description><![CDATA[Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto.]]></description>
 </item><item>
     <title>User Story — Teoria e prática</title>
-    <link>https://augustocolombelli.com/posts/user-stories-theory-practice/</link>
+    <link>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</link>
     <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/user-stories-theory-practice/</guid>
+    <guid>https://augustocolombelli.github.io/posts/user-stories-theory-practice/</guid>
     <description><![CDATA[Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento.]]></description>
 </item><item>
     <title>Design Pattern - Strategy</title>
-    <link>https://augustocolombelli.com/posts/design-pattern-strategy/</link>
+    <link>https://augustocolombelli.github.io/posts/design-pattern-strategy/</link>
     <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/design-pattern-strategy/</guid>
+    <guid>https://augustocolombelli.github.io/posts/design-pattern-strategy/</guid>
     <description><![CDATA[O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade.]]></description>
 </item><item>
     <title>Testes Unitários - Argument Captor</title>
-    <link>https://augustocolombelli.com/posts/unit-tests-argument-captor/</link>
+    <link>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</link>
     <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/posts/unit-tests-argument-captor/</guid>
+    <guid>https://augustocolombelli.github.io/posts/unit-tests-argument-captor/</guid>
     <description><![CDATA[Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.]]></description>
 </item></channel>
 </rss>

@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - Home</title>
-        <link>https://augustocolombelli.com/tags/</link>
+        <link>https://augustocolombelli.github.io/tags/</link>
         <description>Tags - Tag - Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate><atom:link href="https://augustocolombelli.com/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>agile</title>
-    <link>https://augustocolombelli.com/tags/agile/</link>
+    <link>https://augustocolombelli.github.io/tags/agile/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/agile/</guid>
+    <guid>https://augustocolombelli.github.io/tags/agile/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>dod</title>
-    <link>https://augustocolombelli.com/tags/dod/</link>
+    <link>https://augustocolombelli.github.io/tags/dod/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/dod/</guid>
+    <guid>https://augustocolombelli.github.io/tags/dod/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>dor</title>
-    <link>https://augustocolombelli.com/tags/dor/</link>
+    <link>https://augustocolombelli.github.io/tags/dor/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/dor/</guid>
+    <guid>https://augustocolombelli.github.io/tags/dor/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>processos</title>
-    <link>https://augustocolombelli.com/tags/processos/</link>
+    <link>https://augustocolombelli.github.io/tags/processos/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/processos/</guid>
+    <guid>https://augustocolombelli.github.io/tags/processos/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>software</title>
-    <link>https://augustocolombelli.com/tags/software/</link>
+    <link>https://augustocolombelli.github.io/tags/software/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/software/</guid>
+    <guid>https://augustocolombelli.github.io/tags/software/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>transparência</title>
-    <link>https://augustocolombelli.com/tags/transpar%C3%AAncia/</link>
+    <link>https://augustocolombelli.github.io/tags/transpar%C3%AAncia/</link>
     <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/transpar%C3%AAncia/</guid>
+    <guid>https://augustocolombelli.github.io/tags/transpar%C3%AAncia/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>git</title>
-    <link>https://augustocolombelli.com/tags/git/</link>
+    <link>https://augustocolombelli.github.io/tags/git/</link>
     <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/git/</guid>
+    <guid>https://augustocolombelli.github.io/tags/git/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>programação</title>
-    <link>https://augustocolombelli.com/tags/programa%C3%A7%C3%A3o/</link>
+    <link>https://augustocolombelli.github.io/tags/programa%C3%A7%C3%A3o/</link>
     <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/programa%C3%A7%C3%A3o/</guid>
+    <guid>https://augustocolombelli.github.io/tags/programa%C3%A7%C3%A3o/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>burndown</title>
-    <link>https://augustocolombelli.com/tags/burndown/</link>
+    <link>https://augustocolombelli.github.io/tags/burndown/</link>
     <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/burndown/</guid>
+    <guid>https://augustocolombelli.github.io/tags/burndown/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>indicadores</title>
-    <link>https://augustocolombelli.com/tags/indicadores/</link>
+    <link>https://augustocolombelli.github.io/tags/indicadores/</link>
     <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
     <author>Autor</author>
-    <guid>https://augustocolombelli.com/tags/indicadores/</guid>
+    <guid>https://augustocolombelli.github.io/tags/indicadores/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
