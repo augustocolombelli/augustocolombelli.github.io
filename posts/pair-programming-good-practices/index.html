@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>Pair Programming - Construindo em equipe | </title><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://augustocolombelli.github.io/posts/pair-programming-good-practices/featured-image.png"/>
+<meta name="twitter:title" content="Pair Programming - Construindo em equipe"/>
+<meta name="twitter:description" content=""/><meta name="twitter:creator" content="@colombellibr"/><meta name="Description" content=""><meta property="og:title" content="Pair Programming - Construindo em equipe" />
+<meta property="og:description" content="Photo by Peter Olexa on Unsplash
+O Pair Programming é uma prática que a cada dia vem ganhando mais espaço em times ágeis. Essa forma de trabalhar muda um pouco a maneira com que desenvolvemos software, ao invés de criar código sozinho, trabalhamos em parceria com outras pessoas em busca de soluções mais participativas." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://augustocolombelli.github.io/posts/pair-programming-good-practices/" /><meta property="og:image" content="https://augustocolombelli.github.io/posts/pair-programming-good-practices/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-18T18:00:02-03:00" />
+<meta property="article:modified_time" content="2022-03-18T18:00:02-03:00" />
+
+<meta name="application-name" content="Dev Blog">
+<meta name="apple-mobile-web-app-title" content="Dev Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.png" type="image/x-icon"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://augustocolombelli.github.io/posts/pair-programming-good-practices/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/lib/prismjs/prism.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Pair Programming - Construindo em equipe",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/augustocolombelli.github.io\/posts\/pair-programming-good-practices\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/augustocolombelli.github.io\/posts\/pair-programming-good-practices\/featured-image.png",
+                            "width":  1920 ,
+                            "height":  1280 
+                        }],"genre": "posts","wordCount":  952 ,
+        "url": "https:\/\/augustocolombelli.github.io\/posts\/pair-programming-good-practices\/","datePublished": "2022-03-18T18:00:02-03:00","dateModified": "2022-03-18T18:00:02-03:00","description": ""
+    }
+    </script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header>
+    <div class="desktop header" id="header-desktop">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Home" class="header-logo logo-svg">Home</a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul class="menu-inner"><li>
+                            <a class="menu-item" href="/posts/"> Posts </a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/"> Tags </a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/"> Categorias </a>
+                        </li></ul>
+                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <span class="svg-icon icon-moon"></span>
+                </a>
+            </div>
+        </div>
+    </div><div class="mobile header" id="header-mobile">
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <a href="/" title="Home" class="header-logo">Home</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle-mobile">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="menu" id="menu-mobile"><nav>
+                    <h2 class="display-hidden">Основная навигация</h2>
+                    <ul><li>
+                            <a class="menu-item" href="/posts/" title="">Posts</a>
+                        </li><li>
+                            <a class="menu-item" href="/tags/" title="">Tags</a>
+                        </li><li>
+                            <a class="menu-item" href="/categories/" title="">Categorias</a>
+                        </li></ul>
+                </nav>
+                <a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <span class="svg-icon icon-moon"></span>
+                </a></div>
+        </div>
+    </div></header><main class="main">
+<div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Conteúdos</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div>
+
+    
+    
+    <article>
+    
+
+        <header class="header-post">
+
+            
+
+            
+            <div class="post-title">
+
+                    <div class="post-all-meta">
+                        <nav class="breadcrumbs">
+    <ol>
+        <li><a href="/">Home </a></li><li>Pair Programming - Construindo em equipe</li>
+    </ol>
+</nav>
+                        <h1 class="single-title flipInX">Pair Programming - Construindo em equipe</h1><div class="post-meta summary-post-meta"><span class="post-meta-date meta-item">
+                                <span class="svg-icon icon-clock"></span><time class="timeago" datetime="2022-03-18">2022-03-18</time>
+                            </span><span class="post-meta-words meta-item">
+                                <span class="svg-icon icon-pencil"></span>952 palavras
+                            </span>
+                            <span class="post-meta-reading meta-item">
+                                <span class="svg-icon icon-stopwatch"></span>5 minutos
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </header>
+
+        <div class="article-post toc-start">
+
+            <div class="content-block content-block-first content-block-position">
+
+                <div class="post single"><div class="image-theme-classic">
+                        <img src="https://augustocolombelli.github.io/posts/pair-programming-good-practices/featured-image.png" style="width: 100%">
+                    </div><div class="details toc" id="toc-static"  data-kept="">
+                        <div class="details-summary toc-title">
+                            <span>Conteúdos</span>
+                        </div>
+                        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#divida-o-trabalho-em-tarefas">Divida o trabalho em tarefas</a></li>
+        <li><a href="#alinhamento-das-agendas">Alinhamento das agendas</a></li>
+        <li><a href="#ambas-pessoas-pilotam">Ambas pessoas pilotam</a></li>
+        <li><a href="#trabalhe-com-commits-pequenos">Trabalhe com commits pequenos</a></li>
+        <li><a href="#se-surpreenda-com-soluções-diferentes">Se surpreenda com soluções diferentes</a></li>
+        <li><a href="#utilize-tdd">Utilize TDD</a></li>
+        <li><a href="#faça-pausas">Faça pausas</a></li>
+        <li><a href="#faça-o-rodízio-dos-pares">Faça o rodízio dos pares</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusão">Conclusão</a></li>
+  </ul>
+</nav></div>
+                    </div><p>Photo by <a href="https://unsplash.com/@deeezyfree?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreffer">Peter Olexa</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreffer">Unsplash</a></p>
+<p>O <em>Pair Programming</em> é uma prática que a cada dia vem ganhando mais espaço em times ágeis. Essa forma de trabalhar muda um pouco a maneira com que desenvolvemos software, ao invés de criar código sozinho, trabalhamos em parceria com outras pessoas em busca de soluções mais participativas. Apesar de parecer algo simples, alguns cuidados são importantes para aproveitar ao máximo essa prática. Compartilho neste artigo algumas lições aprendidas que tive utilizando o pareamento para desenvolver software.</p>
+<h3 id="divida-o-trabalho-em-tarefas" class="headerLink"><a href="#divida-o-trabalho-em-tarefas" class="header-mark"></a>Divida o trabalho em tarefas</h3><p><em>Pair Programming</em> exige transparência do trabalho a ser realizado. As pessoas envolvidas devem estar cientes de onde se quer chegar. Uma boa maneira de fazer isso é dividir o <em>card</em> em pequenas tarefas. Ao dividir o <em>card</em> em partes menores, ficará claro para todas as pessoas os passos necessários para sua conclusão. Isso facilitará também a comunicação entre as pessoas no pareamento, flexibilizando assim escolher a melhor estratégia a ser utilizada.</p>
+<h3 id="alinhamento-das-agendas" class="headerLink"><a href="#alinhamento-das-agendas" class="header-mark"></a>Alinhamento das agendas</h3><p>Para evitar interromper o pareamento de forma inesperada devido reuniões ou outros compromissos, faça um alinhamento das agendas logo no início. É comum que existam outros compromissos que impossibilitem fazer o pareamento em alguns momentos do dia, alinhar as agendas ajuda para que ambas pessoas possam programar outras atividades. Um ótimo exemplo é que enquanto uma das  pessoas precisa se ausentar, a outra pode atuar em algumas tarefas que exigem mais concentração ou também programar eventuais reuniões fora do pareamento. O alinhamento de agenda é algo rápido, no máximo alguns minutos no início do pareamento.</p>
+<h3 id="ambas-pessoas-pilotam" class="headerLink"><a href="#ambas-pessoas-pilotam" class="header-mark"></a>Ambas pessoas pilotam</h3><p>Uma das coisas mais importante durante o <em>Pair Programming</em> é que ambas as pessoas possam ser piloto e copiloto. Ser piloto ou copiloto tem as suas vantagens, por isso é importante que exista um rodízio entre as participantes. Para pilotar, é necessário que o ambiente da pessoa esteja preparado para realizar as tarefas, o que muitas vezes já exige um compartilhamento de conhecimento. Ambas pessoas fazerem <em>commit</em> e se sentirem responsáveis por cada pequena entrega tem um valor muito grande para o trabalho em equipe.</p>
+<p>Cito aqui uma experiência positiva que tive em um <em>Pair Programming</em> em que optamos por fazer o rodízio de piloto e co-piloto a cada 25/30 minutos, colocando uma pausa de 5 minutos a cada troca. A experiência foi ótima, recomendo fortemente essa forma de trabalhar. Além de um grande compartilhamento de conhecimento, as pausas de 5 minutos deixaram o pareamento mais leve.</p>
+<h3 id="trabalhe-com-commits-pequenos" class="headerLink"><a href="#trabalhe-com-commits-pequenos" class="header-mark"></a>Trabalhe com commits pequenos</h3><p>Submeter alterações em pequenos passos ajuda a dividir um grande problema em partes menores. Quando se trabalha com pequenos commits, o rodízio de piloto e co-piloto se torna mais fácil de ser feito. Troque aquele <em>commit</em> enorme, com muitos arquivos por uma sequência de pequenas alterações. Abaixo um exemplo que normalmente acontece em histórias que exigem algum tipo de refatoração no código, antes de submeter as mudanças. Como pode ser visto, é uma sequência de commits em que cada um deles a aplicação não fica quebrada.</p>
+<ul>
+<li>(1) Cobrir método com testes unitários;</li>
+<li>(2) Extrair o método para uma nova classe com menor responsabilidade;</li>
+<li>(3) Renomear as variáveis;</li>
+<li>(4) Criar teste unitário para regra de negócio X;</li>
+<li>(5) Incluir a regra de negócio X.</li>
+</ul>
+<h3 id="se-surpreenda-com-soluções-diferentes" class="headerLink"><a href="#se-surpreenda-com-solu%c3%a7%c3%b5es-diferentes" class="header-mark"></a>Se surpreenda com soluções diferentes</h3><p>Em algumas situações podem existir divergências de pensamentos, isso é normal, faz parte. O <em>Pair Programming</em> é um momento de troca, é muito importante estar aberto para criar uma linha de raciocínio para resolver algo em conjunto. Esse é um ótimo momento para aprender uma maneira diferente de resolver um problema, e acredite, em algumas vezes você vai se surpreender.</p>
+<h3 id="utilize-tdd" class="headerLink"><a href="#utilize-tdd" class="header-mark"></a>Utilize TDD</h3><p>Criar código orientado a testes (Test-driven development) inverte um pouco a forma que solucionamos os problemas. Primeiro pensamos onde queremos que o código chegue, depois criamos um teste para isso e somente então começamos a implementação. Veja que essa prática exige algumas discussões sobre o que será feito, o que a torna extremamente eficaz durante o pareamento. Sempre que possível, adote essa prática em suas sessões de pareamento, ela tornará as interações muito mais assertivas.</p>
+<h3 id="faça-pausas" class="headerLink"><a href="#fa%c3%a7a-pausas" class="header-mark"></a>Faça pausas</h3><p>O <em>Pair Programming</em> é uma prática com muitos benefícios, entretanto ela exige uma grande troca de energia. Muitas horas seguidas de pareamento pode se tornar algo extremamente cansativo. Recomendo criar intervalos durante as sessões de pareamento e deixar algumas horas do dia reservadas para atividades individuais. Isso vai tornar as sessões de pareamento algo muito mais leve.</p>
+<h3 id="faça-o-rodízio-dos-pares" class="headerLink"><a href="#fa%c3%a7a-o-rod%c3%adzio-dos-pares" class="header-mark"></a>Faça o rodízio dos pares</h3><p>É extremamente saudável para a equipe fazer rodízio dos pares. Isso pode parecer algo simples, mas dependendo do nível de afinidade entre as pessoas da equipe, é possível que existam algumas inseguranças que geram receios. Uma dica é estabelecer alguma política interna na equipe que favoreça fazer esse rodízio, como por exemplo, mudar os pares a cada Sprint (ou também 15 dias).</p>
+<p>É possível que no momento de realizar o rodízio dos pares o card não tenha sido concluído, sendo assim uma das pessoas que estava no pareamento precisará prosseguir nela. Não hesite em mudar os pares mesmo que o card não tenha sido concluído, é muito difícil ocorrer uma sincronia na conclusão deles.</p>
+<h2 id="conclusão" class="headerLink"><a href="#conclus%c3%a3o" class="header-mark"></a>Conclusão</h2><p>O <em>Pair Programming</em> é uma prática repleta de benefícios, na maior parte das vezes que utilizei tive boas experiências. É um ótimo momento para conhecer pessoas novas e aprender com elas. Recomendo fortemente que seja utilizado, no início a equipe pode estranhar, mas conforme o tempo passa os resultados começam a aparecer. Você vai perceber que o compartilhamento de conhecimento entre as pessoas passa a ser algo comum, as soluções passam a ser mais assertivas devido brainstormings que ocorrem durante o pareamento. O senso de trabalho em equipe também vai aumentar, tendo em vista que as tarefas e código gerado passam a ser de responsabilidade coletiva.</p>
+</div><footer>
+                        <div class="post">
+
+
+<div class="post-share"></div>
+
+
+
+
+
+
+</div>
+                </footer></div>
+
+        <div id="toc-final"></div>
+        </div>
+
+    
+    </article>
+    <section class="page single comments content-block-position">
+        <h1 class="display-hidden">Комментарии</h1><div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></section></div>
+
+</main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Movido a <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Tema - <a href="https://ublogger.netlify.app/?utm_source=https://augustocolombelli.github.io/&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+                </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2022</span></div>
+        </div>
+    </footer></div>
+
+        <aside id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="svg-icon icon-arrow-up"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="svg-icon icon-comments-fixed"></i>
+            </a>
+        </aside><script src="https://augusto-4.disqus.com/embed.js" defer></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":10},"comment":{}};</script><script src="/js/theme.min.js"></script><script>
+                window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+                gtag('config', 'G-D0E03R1P6Q');
+            </script><script src="https://www.googletagmanager.com/gtag/js?id=G-D0E03R1P6Q" async></script></body>
+</html>
