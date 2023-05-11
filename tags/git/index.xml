@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Home</title>
+    <link>https://augustocolombelli.github.io/tags/git/</link>
+    <description>Recent content in git on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Mar 2021 07:50:37 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git - Sincronização com Rebasing</title>
+      <link>https://augustocolombelli.github.io/post/git-rebase/</link>
+      <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
+      
+      <guid>https://augustocolombelli.github.io/post/git-rebase/</guid>
+      <description>Garantir que o código fonte esteja sincronizado é fundamental pois ajuda a evitar conflitos futuros ao submetermos o código para o branch principal. O Git possui duas maneiras que permitem isso: o merge; e o rebase.</description>
+    </item>
+    
+  </channel>
+</rss>

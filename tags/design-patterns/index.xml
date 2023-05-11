@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design-patterns on Home</title>
+    <link>https://augustocolombelli.github.io/tags/design-patterns/</link>
+    <description>Recent content in design-patterns on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jan 2021 08:16:11 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design Pattern - Strategy</title>
+      <link>https://augustocolombelli.github.io/post/design-pattern-strategy/</link>
+      <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
+      
+      <guid>https://augustocolombelli.github.io/post/design-pattern-strategy/</guid>
+      <description>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade.</description>
+    </item>
+    
+  </channel>
+</rss>

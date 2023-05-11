@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>burndown on Home</title>
+    <link>https://augustocolombelli.github.io/tags/burndown/</link>
+    <description>Recent content in burndown on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Feb 2021 07:49:54 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/burndown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transparência com gráfico de burndown</title>
+      <link>https://augustocolombelli.github.io/post/transparency-with-burndown/</link>
+      <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
+      
+      <guid>https://augustocolombelli.github.io/post/transparency-with-burndown/</guid>
+      <description>Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto.</description>
+    </item>
+    
+  </channel>
+</rss>
