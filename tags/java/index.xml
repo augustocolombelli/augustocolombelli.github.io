@@ -5,25 +5,22 @@
     <link>https://augustocolombelli.github.io/tags/java/</link>
     <description>Recent content in java on Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 08:16:11 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 29 Jan 2021 08:16:11 -0300</lastBuildDate>
+    <atom:link href="https://augustocolombelli.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design Pattern - Strategy</title>
       <link>https://augustocolombelli.github.io/post/design-pattern-strategy/</link>
       <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/design-pattern-strategy/</guid>
       <description>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade.</description>
     </item>
-    
     <item>
       <title>Testes Unitários - Argument Captor</title>
       <link>https://augustocolombelli.github.io/post/unit-tests-argument-captor/</link>
       <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/unit-tests-argument-captor/</guid>
       <description>Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,16 +5,15 @@
     <link>https://augustocolombelli.github.io/tags/dor/</link>
     <description>Recent content in dor on Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate><atom:link href="https://augustocolombelli.github.io/tags/dor/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 16 Aug 2021 21:29:56 -0300</lastBuildDate>
+    <atom:link href="https://augustocolombelli.github.io/tags/dor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>User Story - Definition of Ready e Definition of Done</title>
       <link>https://augustocolombelli.github.io/post/dod-dor/</link>
       <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/dod-dor/</guid>
       <description>Em equipes ágeis que inspecionam e adaptam os seus processos de maneira recorrente, existem dois tipos de acordo que auxiliam na transparência do fluxo, reduzindo assim a necessidade de processos pesados e burocráticos, são eles o Definition of Ready (DoR) e o Definition of Done (DoD).</description>
     </item>
-    
   </channel>
 </rss>

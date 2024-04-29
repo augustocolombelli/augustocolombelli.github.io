@@ -5,81 +5,71 @@
     <link>https://augustocolombelli.github.io/</link>
     <description>Recent content in Augusto Colombelli Alessio on Home</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://augustocolombelli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 31 Jan 2024 08:38:23 -0300</lastBuildDate>
+    <atom:link href="https://augustocolombelli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testes de Contrato - APIs Orientadas pelos Consumidores.</title>
+      <link>https://augustocolombelli.github.io/post/contract-test-pact/</link>
+      <pubDate>Wed, 31 Jan 2024 08:38:23 -0300</pubDate>
+      <guid>https://augustocolombelli.github.io/post/contract-test-pact/</guid>
+      <description>Integrar APIs é uma atividade que demanda análise cuidadosa, uma vez que implica na dependência de um recurso externo por parte de um microserviço. Essa forma de integração acrescenta um nível de risco às operações, uma vez que discrepâncias entre os dados esperados e os recebidos podem resultar em falhas de integração. Assegurar a continuidade da integração frente a alterações nas APIs torna-se, portanto, uma prioridade crucial, visando evitar contratempos que possam impactar diretamente o usuário final.</description>
+    </item>
     <item>
       <title>About</title>
       <link>https://augustocolombelli.github.io/about/</link>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://augustocolombelli.github.io/about/</guid>
-      <description>Referências  Essa página foi construída utilizando o Hugo. O tema utilizado é o Cupper. A imagem de coruja utilizada na página é de Silke Schäfer desponível em Pixabay.
-Materiais que detalham boas práticas de desenvolvimento de software podem ser encontrados na página de Martin Fowler. Abaixo algumas recomendações:
- Uso do INVEST na construção de User Stories; Uso de feature Toggles/Flags para gerenciar a liberação de novas funcionalidades; Esse breve resumo sobre pirâmide de testes e esse texto mais detalhado falando da pirâmide de teste de forma prática; Detalhes sobre abordagens para versionamento de código; Esse texto detalhando sobre as diferentes abordagens de pair programming.</description>
+      <description>Referências Essa página foi construída utilizando o Hugo. O tema utilizado é o Cupper. A imagem de coruja utilizada na página é de Silke Schäfer desponível em Pixabay.&#xA;Materiais que detalham boas práticas de desenvolvimento de software podem ser encontrados na página de Martin Fowler. Abaixo algumas recomendações:&#xA;Uso do INVEST na construção de User Stories; Uso de feature Toggles/Flags para gerenciar a liberação de novas funcionalidades; Esse breve resumo sobre pirâmide de testes e esse texto mais detalhado falando da pirâmide de teste de forma prática; Detalhes sobre abordagens para versionamento de código; Esse texto detalhando sobre as diferentes abordagens de pair programming.</description>
     </item>
-    
     <item>
       <title>Pair Programming - Construir software em equipe</title>
       <link>https://augustocolombelli.github.io/post/pair-programming-good-practices/</link>
       <pubDate>Fri, 18 Mar 2022 18:00:02 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/pair-programming-good-practices/</guid>
       <description>O Pair Programming é uma prática que a cada dia vem ganhando mais espaço em times ágeis. Essa forma de trabalhar muda um pouco a maneira com que desenvolvemos software, ao invés de criar código sozinho, trabalhamos em parceria com outras pessoas em busca de soluções mais participativas. Apesar de parecer algo simples, alguns cuidados são importantes para aproveitar ao máximo essa prática. Compartilho neste artigo algumas lições aprendidas que tive utilizando o pareamento para desenvolver software.</description>
     </item>
-    
     <item>
       <title>User Story - Definition of Ready e Definition of Done</title>
       <link>https://augustocolombelli.github.io/post/dod-dor/</link>
       <pubDate>Mon, 16 Aug 2021 21:29:56 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/dod-dor/</guid>
       <description>Em equipes ágeis que inspecionam e adaptam os seus processos de maneira recorrente, existem dois tipos de acordo que auxiliam na transparência do fluxo, reduzindo assim a necessidade de processos pesados e burocráticos, são eles o Definition of Ready (DoR) e o Definition of Done (DoD).</description>
     </item>
-    
     <item>
       <title>Git - Sincronização com Rebasing</title>
       <link>https://augustocolombelli.github.io/post/git-rebase/</link>
       <pubDate>Tue, 02 Mar 2021 07:50:37 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/git-rebase/</guid>
       <description>Garantir que o código fonte esteja sincronizado é fundamental pois ajuda a evitar conflitos futuros ao submetermos o código para o branch principal. O Git possui duas maneiras que permitem isso: o merge; e o rebase.</description>
     </item>
-    
     <item>
       <title>Transparência com gráfico de burndown</title>
       <link>https://augustocolombelli.github.io/post/transparency-with-burndown/</link>
       <pubDate>Thu, 04 Feb 2021 07:49:54 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/transparency-with-burndown/</guid>
       <description>Transparência é um dos principais pilares presentes em gestão de projetos de software. É comum que durante o ciclo de desenvolvimento de uma nova funcionalidade, diferentes pessoas de diferentes papéis tenham alguma participação no seu desenvolvimento. Manter todas as partes alinhadas é um grande desafio que pode impactar fortemente no resultado do projeto.</description>
     </item>
-    
     <item>
       <title>User Story — Teoria e prática</title>
       <link>https://augustocolombelli.github.io/post/user-stories-theory-practice/</link>
       <pubDate>Wed, 03 Feb 2021 09:16:07 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/user-stories-theory-practice/</guid>
       <description>Uma boa técnica utilizada em ambientes ágeis são as User Stories. Quando bem utilizadas, de forma simples e objetiva, elas podem auxiliar mesclando em um único artefato atributos úteis em todas etapas do processo de desenvolvimento.</description>
     </item>
-    
     <item>
       <title>Design Pattern - Strategy</title>
       <link>https://augustocolombelli.github.io/post/design-pattern-strategy/</link>
       <pubDate>Fri, 29 Jan 2021 08:16:11 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/design-pattern-strategy/</guid>
       <description>O padrão de projeto Strategy é muito útil quando queremos que parte do nosso algoritmo respeita alguma regra específica. Utilizando esse padrão, podemos criar código mais limpo e classes com menos responsabilidade.</description>
     </item>
-    
     <item>
       <title>Testes Unitários - Argument Captor</title>
       <link>https://augustocolombelli.github.io/post/unit-tests-argument-captor/</link>
       <pubDate>Wed, 27 Jan 2021 07:49:54 -0300</pubDate>
-      
       <guid>https://augustocolombelli.github.io/post/unit-tests-argument-captor/</guid>
       <description>Argument Captor é um ótimo recurso que pode ser utilizado para validar o objeto que está sendo utilizado em um método. É muito útil quando pretendemos cobrir uma funcionalidade legada muito complexa com testes automatizados e sabemos o que esperar daquele objeto através por exemplo, da execução de um teste funcional.</description>
     </item>
-    
   </channel>
 </rss>
