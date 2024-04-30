@@ -6,12 +6,12 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 31 Jan 2024 08:38:23 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2024 08:38:23 -0300</lastBuildDate>
     <atom:link href="https://augustocolombelli.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testes de Contrato - APIs Orientadas pelos Consumidores</title>
       <link>https://augustocolombelli.github.io/post/contract-test-pact/</link>
-      <pubDate>Wed, 31 Jan 2024 08:38:23 -0300</pubDate>
+      <pubDate>Tue, 30 Apr 2024 08:38:23 -0300</pubDate>
       <guid>https://augustocolombelli.github.io/post/contract-test-pact/</guid>
       <description>Integrar APIs é uma atividade que demanda análise cuidadosa, uma vez que implica na dependência de um recurso externo por parte de um microserviço. Essa forma de integração acrescenta um nível de risco às operações, uma vez que discrepâncias entre os dados esperados e os recebidos podem resultar em falhas de integração. Assegurar a continuidade da integração frente a alterações nas APIs torna-se, portanto, uma prioridade crucial, visando evitar contratempos que possam impactar diretamente o usuário final.</description>
     </item>

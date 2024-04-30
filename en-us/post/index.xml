@@ -6,12 +6,12 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2024 08:38:23 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2024 08:38:23 -0300</lastBuildDate>
     <atom:link href="https://augustocolombelli.github.io/en-us/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contract Tests - APIs Guided by Consumers</title>
       <link>https://augustocolombelli.github.io/en-us/post/contract-test-pact/</link>
-      <pubDate>Wed, 31 Jan 2024 08:38:23 -0300</pubDate>
+      <pubDate>Tue, 30 Apr 2024 08:38:23 -0300</pubDate>
       <guid>https://augustocolombelli.github.io/en-us/post/contract-test-pact/</guid>
       <description>Integrating APIs is an activity that requires careful analysis, as it involves the dependency of a microservice on an external resource. This integration adds a level of risk to operations, as discrepancies between expected and received data can result in integration failures. Ensuring that the API integration is working correctly is a crucial priority, considering that any eventual problem can impact the end user.&#xA;An approach that generates value in scenarios involving API integration is the Contract Test.</description>
     </item>
