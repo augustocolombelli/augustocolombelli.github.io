@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en-us">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.122.0">
-  <link rel="canonical" href="https://augustocolombelli.github.io/post/contract-test-pact/" />
+  <link rel="canonical" href="https://augustocolombelli.github.io/en-us/post/contract-test-pact/" />
 
   
     
-    <meta name="description" content="Integrar APIs é uma atividade que demanda análise cuidadosa, uma vez que implica na dependência de um recurso externo por parte de um microserviço. Essa forma de integração acrescenta um nível de risco às operações, uma vez que discrepâncias entre os dados esperados e os recebidos podem resultar em falhas de integração. Assegurar a continuidade da integração frente a alterações nas APIs torna-se, portanto, uma prioridade crucial, visando evitar contratempos que possam impactar diretamente o usuário final.">
+    <meta name="description" content="Integrating APIs is an activity that requires careful analysis, as it involves the dependency of a microservice on an external resource. This integration adds a level of risk to operations, as discrepancies between expected and received data can result in integration failures. Ensuring that the API integration is working correctly is a crucial priority, considering that any eventual problem can impact the end user.
+An approach that generates value in scenarios involving API integration is the Contract Test.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://augustocolombelli.github.io/apple-touch-icon.png">
@@ -56,7 +57,7 @@
 
   
   
-  <title>Testes de Contrato - APIs Orientadas pelos Consumidores | Home</title>
+  <title>Contract Tests - APIs Guideds by Consumers | Home</title>
 </head>
 
   <body>
@@ -256,7 +257,7 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use href="#bookmark"></use>
       </svg>
-      Testes de Contrato - APIs Orientadas pelos Consumidores
+      Contract Tests - APIs Guideds by Consumers
     </h1>
 
     <div class="date">
@@ -273,30 +274,30 @@
     
 
 
-    <p>Integrar APIs é uma atividade que demanda análise cuidadosa, uma vez que implica na dependência de um recurso externo por parte de um microserviço. Essa forma de integração acrescenta um nível de risco às operações, uma vez que discrepâncias entre os dados esperados e os recebidos podem resultar em falhas de integração. Assegurar a continuidade da integração frente a alterações nas APIs torna-se, portanto, uma prioridade crucial, visando evitar contratempos que possam impactar diretamente o usuário final.</p>
-<p>Uma abordagem de grande valor em cenários que envolvem integração entre APIs é o uso de <a href="https://martinfowler.com/bliki/ContractTest.html">Testes de Contratos</a>. Esses testes verificam, por meio de requisições, se as chamadas para um serviço externo estão de acordo com o esperado. Eles auxiliam na prevenção de falhas, pois, por meio de asserções, permitem antecipar o feedback de eventuais alterações que possam causar quebras no contrato.</p>
-<p>Neste artigo, vamos demonstrar o uso dos testes de contrato de forma prática com alguns microserviços que se integram. O artigo possui três divisões principais, sendo elas:</p>
+    <p>Integrating APIs is an activity that requires careful analysis, as it involves the dependency of a microservice on an external resource. This integration adds a level of risk to operations, as discrepancies between expected and received data can result in integration failures. Ensuring that the API integration is working correctly is a crucial priority, considering that any eventual problem can impact the end user.</p>
+<p>An approach that generates value in scenarios involving API integration is the <a href="https://martinfowler.com/bliki/ContractTest.html">Contract Test</a>. These types of tests verify, through requests, whether the calls to an external service align with the expected data. They help prevent failures by using assertions that allow for early feedback on potential problems caused by a code change that breaks the contract.</p>
+<p>In this article, we&rsquo;ll demonstrate a use case of contract tests in practice with three integrated microservices. The text has three divisions, as demonstrated below:</p>
 <ul>
-<li>Desenvolvimento de três microserviços que se integram;</li>
-<li>Inclusão de testes de contratos para validar as integrações entre os microserviços;</li>
-<li>Simulação de alterações que quebram o contrato para fazer os testes falharem.</li>
+<li>Development of three integrated microservices.</li>
+<li>Adding contract tests to verify the integration between the microservices.</li>
+<li>Simulating some breaking changes to demonstrate the failure of the contract tests.</li>
 </ul>
-<p>O código do projeto está disponível no Github em <a href="https://github.com/augustocolombelli/pact-contract-test/">pact-contract-test</a>.</p>
-<h2 id="sistema-de-comercialização-de-livros">Sistema de Comercialização de Livros</h2>
-<p>Para exemplificar o uso dos testes de contrato, vamos utilizar um sistema composto por três microserviços: <code>person-data-service</code>; <code>book-data-service</code>; e <code>book-sales-service</code>.</p>
-<p>O microserviço <code>book-sales-service</code> é responsável por realizar operações de vendas de livros. Para efetivar uma venda, ele depende do <code>person-data-service</code> para obter dados das pessoas e do <code>book-data-service</code> para obter dados dos livros e atualizar o estoque.</p>
+<p>The project code is available in the <a href="https://github.com/augustocolombelli/pact-contract-test/">pact-contract-test</a> GitHub repository.</p>
+<h2 id="book-sales-system">Book Sales System</h2>
+<p>For this article, we&rsquo;ll use an example system with three microservices: <code>person-data-service</code>, <code>book-data-service</code>, and <code>book-sales-service</code>.</p>
+<p>The microservice <code>book-sales-service</code> is responsible for performing book sales operations. To make a sale, the service depends on <code>person-data-service</code> to retrieve person data and <code>book-data-service</code> to retrieve book data and update the stock.</p>
 <figure><img src="images/1-container-diagram.png"
-         alt="Serviços do sistema de venda de livros."/><figcaption>
-            <p>Serviços do sistema de venda de livros.</p>
+         alt="Services of book sales system."/><figcaption>
+            <p>Services of book sales system.</p>
         </figcaption>
 </figure>
 
-<h3 id="serviço-de-dados-de-pessoas">Serviço de Dados de Pessoas</h3>
-<p>O <code>person-data-service</code> possui uma API que recebe o código da pessoa e retorna os seus dados. Uma requisição para obter os dados de uma pessoa pode ser feita conforme o comando <code>curl</code> demonstrado abaixo.</p>
+<h2 id="person-data-service">Person Data Service</h2>
+<p>The <code>person-data-service</code> has an API that receives the person code and returns the corresponding data. A request to retrieve the person data can be made as demonstrated in the <code>curl</code> command below.</p>
 <pre><code>curl --location --request \
     GET 'http://localhost:8082/persons/1001'  
 </code></pre>
-<p>O resultado da requisição retorna os dados da pessoa como demonstrado abaixo.</p>
+<p>The request result displays the person data as demonstrated below.</p>
 <pre><code>{
     &quot;id&quot; : 35,
     &quot;name&quot; : &quot;John&quot;,
@@ -304,26 +305,26 @@
     &quot;passportNumber&quot; : FT875654
 }
 </code></pre>
-<p>O serviço possui uma estrutura simples composta por: <code>Controllers</code>; <code>Services</code>; e <code>Repositories</code>. O objetivo desse exercício é testar o contrato entre as APIs, sem utilizar integração com banco de dados. Os dados são armazenados em uma coleção em memória. Abaixo está o diagrama com os principais componentes.</p>
+<p>The service has a simple structure composed of <code>Controller</code>, <code>Service</code>, and <code>Repository</code>. The purpose of this exercise is to test the contract between the APIs without integrating a database. The data is persisted in an in-memory collection. Below is a diagram illustrating the main components.</p>
 <figure><img src="images/2-person-data-service-component-diagram.png"
-         alt="Componentes de person-data-service"/><figcaption>
-            <p>Componentes de <code>person-data-service</code></p>
+         alt="Components of person-data-service"/><figcaption>
+            <p>Components of <code>person-data-service</code></p>
         </figcaption>
 </figure>
 
-<h3 id="serviço-de-dados-de-livros">Serviço de Dados de Livros</h3>
-<p>O <code>book-data-service</code> possui duas APIs: uma que recebe o código do livro e retorna seus dados, e outra responsável por atualizar o estoque. O código está estruturado de forma similar ao <code>person-data-service</code>, ou seja, com <code>Controller</code>, <code>Service</code> e <code>Repository</code>, conforme demonstrado no diagrama abaixo.</p>
+<h3 id="book-data-service">Book Data Service</h3>
+<p>The <code>book-data-service</code> consists of two APIs: one that receives the book code and returns the corresponding data, and another API responsible for updating the stock. The code is structured similarly to the <code>person-data-service</code>, with <code>Controllers</code>, <code>Services</code>, and <code>Repositories</code>, as illustrated in the image below.</p>
 <figure><img src="images/3-book-data-service-component-diagram.png"
-         alt="Componentes de book-data-service."/><figcaption>
-            <p>Componentes de <code>book-data-service</code>.</p>
+         alt="Components of book-data-service."/><figcaption>
+            <p>Components of <code>book-data-service</code>.</p>
         </figcaption>
 </figure>
 
-<h3 id="obter-dados-dos-livros">Obter dados dos livros</h3>
-<p>O comando <code>curl</code> abaixo demonstra como fazer uma requisição para obter os dados de um livro.</p>
+<h3 id="get-book-data">Get book data</h3>
+<p>The <code>curl</code> command below demonstrates how to make a request to retrieve book data.</p>
 <pre><code>curl --location --request GET 'http://localhost:8081/books/201'
 </code></pre>
-<p>O retorno será no formato <code>JSON</code> conforme demonstrado abaixo.</p>
+<p>The response is in <code>JSON</code> format, as demonstrated below.</p>
 <pre><code>{
   &quot;id&quot;: 202,
   &quot;name&quot;: &quot;Refactoring: Improving the Design of Existing Code&quot;,
@@ -331,67 +332,67 @@
   &quot;isbn&quot;: &quot;0201485672&quot;
 } 
 </code></pre>
-<h3 id="atualizar-o-estoque-do-livro">Atualizar o estoque do livro</h3>
-<p>A atualização do estoque de um livro é feita por meio de uma requisição <code>POST</code>, como exemplificado abaixo.</p>
+<h3 id="book-stock-update">Book stock update</h3>
+<p>The book stock update is performed through a <code>POST</code> request, as demonstrated below.</p>
 <pre><code>curl --location 'http://localhost:8081/books/updateStock' \
 --header 'Content-Type: application/json' \
 --data '{&quot;id&quot;: 202,&quot;quantity&quot;: 1}'
 </code></pre>
-<p>A API irá retornar o status da operação com <code>SUCCESS</code> ou <code>FAILURE</code>, dependendo do resultado. No caso de sucesso:</p>
+<p>The API will return the status of the operation as either <code>SUCCESS</code> or <code>FAILURE</code>, depending on the result. In the case of success:</p>
 <pre><code>{
     &quot;status&quot;: &quot;SUCCESS&quot;,
     &quot;message&quot;:&quot;The stock of the book 202 was update to 2.&quot;
 }
 </code></pre>
-<p>Se ocorrer algum problema, uma falha será retornada, como demonstrado no exemplo abaixo, onde a operação resulta em um estoque negativo.</p>
+<p>In case of an issue, an error will be returned, as demonstrated below, such as in a scenario with insufficient stock.</p>
 <pre><code>{
  &quot;status&quot;: &quot;FAILURE&quot;,
  &quot;message&quot;: &quot;Failed to update stock of book 202 because the new stock will be less than 0.&quot;
 }
 </code></pre>
-<h3 id="serviço-de-venda-de-livros">Serviço de Venda de Livros</h3>
-<p>O serviço principal é o <code>book-sales-service</code>. Este é o serviço responsável por realizar as operações de vendas, orquestrando a integração com outros microserviços.</p>
-<p>Para efetuar uma venda, é necessário fornecer o código do livro e o código da pessoa. O serviço então consulta os dados da pessoa no <code>person-data-service</code> e os dados do livro no <code>book-data-service</code>. Ao final da operação, faz uma nova chamada ao <code>book-data-service</code> para atualizar o estoque. A operação pode ser realizada utilizando o comando <code>curl</code> abaixo.</p>
+<h3 id="book-sales-service">Book Sales Service</h3>
+<p>The primary service is <code>book-sales-service</code>. This service is responsible for conducting sales operations and orchestrating the integration between the other microservices.</p>
+<p>To make a sale, it&rsquo;s necessary to send a request with the book ID and person ID. The service will then retrieve the person data from <code>person-data-service</code> and the book data from <code>book-data-service</code>. At the end of the operation, a new request is made to <code>book-data-service</code> to update the stock. This operation can be performed using the <code>curl</code> command below.</p>
 <pre><code>curl -X POST --location 'http://localhost:8080/book-sales' \
 --header 'Content-Type: application/json' \
 --data '{&quot;personId&quot;: 1001,&quot;bookId&quot;: 203}'
 </code></pre>
-<p>Se a venda for realizada com sucesso, uma mensagem será retornada para indicar a conclusão da operação, como exemplificado abaixo.</p>
+<p>If the sale is successful, a message will be returned with the operation results, as demonstrated below.</p>
 <pre><code>{
   &quot;status&quot;: &quot;SUCCESS&quot;,
   &quot;message&quot;: &quot;The sale to person John with passport number FT8966563 was successful.&quot;
 }
 </code></pre>
-<p>Caso aconteça alguma falha na venda, uma mensagem com mais detalhes é retornada. No exemplo abaixo, um exemplo de venda de um livro que não possui estoque.</p>
+<p>For any sales issues, a message with more details will be returned. In the example below, a book sale is attempted when there is no stock available.</p>
 <pre><code>{
  &quot;status&quot;: &quot;OUT_OF_STOCK&quot;, 
  &quot;message&quot;: &quot;The current stock of book 201 is 0 and is not sufficient to make the sale.&quot;
 }
 </code></pre>
-<p>Além do <code>Controller</code>, <code>Service</code> e <code>Repository</code>, esse serviço possui os componentes responsáveis por integrar com os provedores, são eles: <code>BookDataServiceWebClient</code>; e <code>PersonDataServiceWebClient</code>. O diagrama abaixo demonstra como os componentes estão organizados.
+<p>In addition to <code>Controller</code>, <code>Service</code>, and <code>Repository</code>, this service includes components responsible for integrating with the providers: <code>BookDataServiceWebClient</code> and <code>PersonDataServiceWebClient</code>. The diagram below illustrates how these components are organized.</p>
 <figure><img src="images/4-book-sales-service-component-diagram.png"
-         alt="Componentes de book-sales-service."/><figcaption>
-            <p>Componentes de <code>book-sales-service</code>.</p>
-        </figcaption>
-</figure>
-</p>
-<h2 id="testes-de-contrato">Testes de Contrato</h2>
-<p>O serviço <code>book-sales-service</code> depende do <code>book-data-service</code> e do <code>person-data-service</code> para realizar uma operação de venda, o que torna essencial garantir a comunicação entre eles.</p>
-<p>Os Testes de Contrato são uma maneira eficiente de garantir a integração, evitando problemas decorrentes da quebra de contrato. <a href="https://pact.io/">Pact</a> é uma ferramenta que possui as características necessárias para trabalhar com testes de contrato, oferecendo funcionalidades que permitem que os testes sejam orientados pelos consumidores, ou seja, os consumidores definem qual contrato deve ser seguido.</p>
-<h3 id="pact">Pact</h3>
-<p>Pact permite testar a integração entre provedores e consumidores de dados. Possui uma abordagem simples e fácil de ser colocada em prática, com três pontos principais: <code>Broker</code>, <code>Provider</code> e <code>Consumer</code>.</p>
-<p>O <code>broker</code> é responsável por centralizar os contratos, sendo nele que os <code>Consumers</code> publicam seus contratos. Os <code>Providers</code> também utilizam o <code>broker</code>, porém com o objetivo de verificar se a API está de acordo com o contrato definido pelos Consumers.</p>
-<p>O diagrama abaixo, fornecido pela própria documentação do Pact, demonstra em mais detalhes os passos utilizados.</p>
-<figure><img src="images/5-pact-diagram.png"
-         alt="Fonte da imagem: https://docs.pact.io/"/><figcaption>
-            <p>Fonte da imagem: <a href="https://docs.pact.io/">https://docs.pact.io/</a></p>
+         alt="Componentes of book-sales-service."/><figcaption>
+            <p>Componentes of <code>book-sales-service</code>.</p>
         </figcaption>
 </figure>
 
-<h3 id="inclusão-do-pact-para-testar-os-contratos">Inclusão do Pact para testar os contratos</h3>
-<p>O microsserviço responsável por consumir outras APIs é encarregado de criar e publicar o contrato. Neste caso, o <code>book-sales-service</code> é o <code>Consumer</code>. Os microserviços <code>book-data-service</code> e <code>person-data-service</code> são responsáveis por fornecer os dados, sendo eles os <code>Providers</code>.</p>
+<h2 id="contract-test">Contract Test</h2>
+<p>The <code>book-sales-service</code> depends on both the <code>book-data-service</code> and <code>person-data-service</code> to conduct sales operations. Therefore, it&rsquo;s essential to ensure communication between these services.</p>
+<p>Contract Testing is an efficient way to ensure integration, avoiding issues stemming from contract breaches. <a href="https://pact.io/">Pact</a> is a tool that has the necessary features for working with contract tests, offering functionalities that enable consumer-driven testing, meaning consumers define which contract should be followed.</p>
+<h3 id="pact">Pact</h3>
+<p>Pact enables testing the integration between providers and data consumers. It offers a straightforward and practical approach, consisting of three main components: <code>Broker</code>, <code>Provider</code>, and <code>Consumer</code>.</p>
+<p>The <code>broker</code> centralizes the contracts and serves as the platform where <code>Consumers</code> publish their contracts. <code>Providers</code> also use the <code>broker</code>, but their aim is to validate whether their APIs meet the contracts defined by consumers.</p>
+<p>The diagram below, provided by Pact documentation, illustrates in more detail the steps involved in the testing process.</p>
+<figure><img src="images/5-pact-diagram.png"
+         alt="Source: https://docs.pact.io/"/><figcaption>
+            <p>Source: <a href="https://docs.pact.io/">https://docs.pact.io/</a></p>
+        </figcaption>
+</figure>
+
+<h3 id="testing-contracts-with-pact">Testing Contracts with Pact</h3>
+<p>The microservice responsible for consuming the APIs needs to create and publish the contract. In this scenario, the <code>book-sales-service</code> acts as the <code>Consumer</code>. The microservices <code>book-data-service</code> and <code>person-data-service</code>, responsible for providing the data, are the providers.</p>
 <h4 id="consumers">Consumers</h4>
-<p>O primeiro passo é configurar o serviço para utilizar o <code>pact</code>. Neste exemplo, está sendo utilizado o <code>Gradle</code>, sendo necessário incluir o <code>plugin</code> e as dependências no arquivo <code>build.gradle</code>, conforme demonstrado abaixo.</p>
+<p>The initial step involves setting up the service to utilize <code>Pact</code>. In this example, <code>Gradle</code> is used, requiring the addition of the plugin and dependencies to the <code>build.gradle</code> file, as demonstrated below.</p>
 <pre><code>plugins {
  [...]
  id 'au.com.dius.pact' version &quot;4.3.15&quot;
@@ -402,19 +403,19 @@
  testImplementation 'au.com.dius.pact.consumer:junit5:4.3.15'
 }
 </code></pre>
-<p>É necessário incluir também a <code>url</code> do <code>broker</code> conforme demonstrado abaixo.</p>
+<p>It&rsquo;s necessary to include the broker <code>URL</code>, as demonstrated below.</p>
 <pre><code>pact {
  publish {
    pactBrokerUrl = &quot;http://localhost:9292&quot;
  }
 }
 </code></pre>
-<h4 id="contrato-com-person-data-service">Contrato com <code>person-data-service</code></h4>
-<p>Para criar o contrato com <code>person-data-service</code> é necessário uma nova classe que estende <code>PactConsumerTestExt</code>.</p>
+<h4 id="contract-with-person-data-service">Contract with <code>person-data-service</code></h4>
+<p>To create the contract with <code>person-data-service</code>, it&rsquo;s necessary to create a new class that extends <code>PactConsumerTestExt</code>.</p>
 <pre><code class="language-java">@ExtendWith(PactConsumerTestExt.class)
 public class BookSalesConsumerForPersonDataContractTest
 </code></pre>
-<p>Deve-se criar um método com os detalhes do contrato, onde são estabelecidos os requisitos por parte do consumidor. Como pode ser visto abaixo, espera-se que no corpo da resposta sejam retornados o código da pessoa, nome e número do passaporte.</p>
+<p>A new method with the contract details needs to be created, where the consumer&rsquo;s requirements are defined. As demonstrated below, <code>person-data-service</code> needs to return the ID, name, and passport number.</p>
 <pre><code class="language-java">@Pact(consumer = CONSUMER_BOOK_SALES_SERVICE_GET_PERSONS, provider = PROVIDER_PERSON_DATA_SERVICE)
 public V4Pact whenRequestPersonById_thenReturnsPerson(PactDslWithProvider builder) {
     PactDslJsonBody bodyResponse = new PactDslJsonBody()
@@ -434,7 +435,7 @@ public V4Pact whenRequestPersonById_thenReturnsPerson(PactDslWithProvider builde
             .toPact(V4Pact.class);
 }
 </code></pre>
-<p>É necessário também um segundo método com objetivo de fazer a interação com o teste. Nele é utilizado <code>MockServer</code> em conjunto com o <code>WebClient</code> conforme demonstrado abaixo.</p>
+<p>It&rsquo;s also necessary to include a second method to verify the test. <code>MockServer</code> with <code>WebClient</code> is used for this purpose, as demonstrated below.</p>
 <pre><code class="language-java">@PactTestFor(providerName = PROVIDER_PERSON_DATA_SERVICE, 
         pactMethod = &quot;whenRequestPersonById_thenReturnsPerson&quot;, 
         providerType = SYNCH)
@@ -456,8 +457,8 @@ public void whenRequestPersonById_thenReturnsPerson(MockServer mockServer) {
     assertThat(personDataResponse.getPassportNumber()).isInstanceOf(String.class).isEqualTo(A_PERSON_PASSPORT_NUMBER);
 }
 </code></pre>
-<h4 id="contrato-com-book-data-service">Contrato com <code>book-data-service</code></h4>
-<p>No caso de <code>book-data-service</code> são duas dependências, uma para obter os dados do livro e outro para solicitar a atualização do estoque.</p>
+<h4 id="contract-with-book-data-service">Contract with <code>book-data-service</code></h4>
+<p>In the <code>book-data-service</code>, there are two dependencies: one to retrieve the book data and another to request the stock update.</p>
 <pre><code class="language-java">@Pact(consumer = CONSUMER_BOOK_SALES_SERVICE_GET_BOOKS, provider = PROVIDER_BOOK_DATA_SERVICE)
 public V4Pact whenRequestBookById_thenReturnsBook(PactDslWithProvider builder) {
     PactDslJsonBody bodyResponse = new PactDslJsonBody()
@@ -502,13 +503,13 @@ public V4Pact whenUpdateBookStock_thenReturnsStatus(PactDslWithProvider builder)
 }
 </code></pre>
 <h3 id="providers">Providers</h3>
-<p>Com os contratos definidos pelos <code>Consumers</code>, o próximo passo é preparar a verificação pelos provedores. Os providers são <code>book-data-service</code> e <code>person-data-service</code>, sendo necessário criar um teste específico para cada um deles. Nesse caso, a inclusão do <code>Pact</code> depende da adição da dependência e das configurações no arquivo <code>build.gradle</code>, conforme demonstrado abaixo.</p>
+<p>With the contracts defined by the <code>Consumers</code>, the next step is to prepare the verification for the providers. The providers are <code>book-data-service</code> and <code>person-data-service</code>, requiring the creation of specific tests for each of them. In this case, the inclusion of <code>Pact</code> depends on the dependency and the configuration in the <code>build.gradle</code> file, as demonstrated below.</p>
 <pre><code>dependencies {
  [...]
  testImplementation 'au.com.dius.pact.provider:junit5spring:4.5.6'
 }
 </code></pre>
-<p>Algumas variáveis precisam ser definidas para a execução dos testes. São elas: a <code>url</code>, a versão e se os resultados devem ser publicados com a execução dos testes.</p>
+<p>Some variables need to be defined for the test execution. They are: the <code>url</code>, the version, and if the results need to be published with the test execution.</p>
 <pre><code>tasks.named('test') {
  useJUnitPlatform()
 
@@ -517,8 +518,8 @@ public V4Pact whenUpdateBookStock_thenReturnsStatus(PactDslWithProvider builder)
  systemProperties[&quot;pact.verifier.publishResults&quot;] = &quot;true&quot;
 }
 </code></pre>
-<h3 id="verificação-do-contrato-por-person-data-service">Verificação do contrato por <code>person-data-service</code></h3>
-<p>Para que não seja necessário iniciar toda a aplicação, é utilizado <code>@WebMvcTest</code>. Um <code>mock</code> da classe de serviço é adicionado para que o contexto do teste seja específica para o <code>Controller</code>.</p>
+<h3 id="contract-verification-by-person-data-service">Contract verification by <code>person-data-service</code></h3>
+<p>To avoid the need to start the entire application, <code>@WebMvcTest</code> is used. A <code>mock</code> of the service class is added so that the test context is specific to the <code>Controller</code>.</p>
 <pre><code class="language-java">@WebMvcTest
 @Provider(&quot;person-data-service&quot;)
 @PactBroker
@@ -537,7 +538,7 @@ public class PersonDataProviderForBookSalesContractTest {
     //[...]
 }
 </code></pre>
-<p>O <code>mock</code> deve ser incluído em um método anotado com <code>@State</code>, que é o ponto do código onde se conecta com o <code>Consumer</code>. No <code>@State</code>, é importante que a string definida seja a mesma definida quando se está criando o contrato no <code>consumer</code>. No caso de pessoa, ela é atribuída no builder de <code>V4Pact</code> em <code>given(&quot;it has a person and status code is 200&quot;)</code>.</p>
+<p>The <code>mock</code> must be included in the method annotated with <code>@State</code>, representing the part of the code where it connects with the <code>Consumer</code>. In the <code>@State</code>, it&rsquo;s important that the string defined matches the one defined in the <code>consumer</code>. In the case of a person, it&rsquo;s included in the <code>V4Pact</code> builder as <code>given(&quot;it has a person and status code is 200&quot;)</code>.</p>
 <pre><code class="language-java">@State(&quot;it has a person and status code is 200&quot;)
 public void itHasPersonWithIdAndStatusIs200() {
     when(personService.getPersonById(A_PERSON_ID))
@@ -548,15 +549,15 @@ public void itHasPersonWithIdAndStatusIs200() {
                     .build());
 }
 </code></pre>
-<p>Por fim, é necessário adicionar o código responsável por realizar a verificação do contrato.</p>
+<p>It&rsquo;s necessary to add the code responsible for verifying the contract.</p>
 <pre><code class="language-java">@TestTemplate
 @ExtendWith(PactVerificationSpringProvider.class)
 void pactVerificationTestTemplate(PactVerificationContext context) {
     context.verifyInteraction();
 }
 </code></pre>
-<h3 id="verificação-do-contrato-por-book-data-service">Verificação do contrato por <code>book-data-service</code></h3>
-<p>O mesmo procedimento deve ser feito para o <code>book-data-service</code>, sendo a única diferença que neste caso há dois contratos: um para retornar os dados do livro e outro para atualizar o estoque. Portanto, são necessários dois <code>@State</code>, como demonstrado abaixo.</p>
+<h3 id="contract-verification-by-book-data-service">Contract verification by <code>book-data-service</code></h3>
+<p>The same must be done for <code>book-data-service</code>, the difference in this case there are two contracts: one responsible for retrieving book data and another responsible for updating the stock. Therefore, two <code>@State</code> annotations are required, as demonstrated below.</p>
 <pre><code class="language-java">@State(&quot;it has a book and status code is 200&quot;)
 public void itHasBookWithIdAndStatusIs200() {
     when(bookService.getBookById(A_BOOK_ID))
@@ -575,8 +576,8 @@ public void aRequestToUpdateTheStockOfBook() {
                     .build());
 }
 </code></pre>
-<h2 id="publicação-e-verificação-do-contrato">Publicação e Verificação do contrato</h2>
-<p>Com os testes criados, o próximo passo é publicar o contrato no Pact Broker, permitindo assim que os providers realizem a verificação. É necessário ter uma instância do broker, para isso utilizamos um contêiner. Abaixo está o código responsável pelo contêiner, que faz parte do <code>docker-compose</code> utilizado para os serviços.</p>
+<h2 id="contract-publishing-and-verification">Contract Publishing and Verification</h2>
+<p>With the tests created, the next step is to publish the contract to the Pact Broker, allowing the providers to perform verification. For this, we need an instance of the <code>broker</code>, and we are using a container for this purpose. Below is the code responsible for starting a container, which is part of the <code>docker-compose</code> used in other services.</p>
 <pre><code>services:
   pactbroker:
     image: pactfoundation/pact-broker:2.104.0.0
@@ -587,98 +588,98 @@ public void aRequestToUpdateTheStockOfBook() {
       - &quot;9292:9292&quot;
 [...]   
 </code></pre>
-<p>Para iniciar somente o <code>pact broker</code>, basta executar o comando abaixo. O <code>broker</code> estará disponível em <code>http://localhost:9292/</code>.</p>
+<p>To start only the Pact Broker, run the following command. The broker will be available at <code>http://localhost:9292/</code>.</p>
 <pre><code>docker-compose up pactbroker -d
 </code></pre>
-<p>Uma página semelhante a demonstrada na figura abaixo será exibida.</p>
+<p>A page like the one demonstrated below will be displayed.</p>
 <figure><img src="images/6-initial-page-broker.png"
-         alt="Página inicial do pact broker."/><figcaption>
-            <p>Página inicial do pact broker.</p>
+         alt="Start page of pact broker."/><figcaption>
+            <p>Start page of pact broker.</p>
         </figcaption>
 </figure>
 
-<h3 id="publicação-do-contrato-pelo-consumer">Publicação do contrato pelo consumer</h3>
-<p>Com o <code>broker</code> funcionando, o próximo passo é realizar a publicação do contrato pelo consumidor, o <code>book-sales-service</code>. Para isso, é necessário estar no diretório do projeto e fazer o <code>build</code>, conforme demonstrado abaixo.</p>
+<h3 id="contract-publication-by-the-consumer">Contract publication by the <code>consumer</code></h3>
+<p>With the <code>broker</code> working, the next step is to publish the contract by the consumer, the <code>book-sales-service</code>. To do this, navigate to the project folder and execute the <code>build</code> command, as demonstrated below.</p>
 <pre><code>./gradlew clean build
 </code></pre>
-<p>Isso vai gerar alguns arquivos <code>json</code> em <code>buid\pacts</code>. Para cada contrato é gerado um arquivo diferente, como demonstrado abaixo.</p>
+<p>Some <code>JSON</code> files will be generated in the <code>build\pacts</code> folder. A separate file is generated for each contract, as demonstrated below.</p>
 <figure><img src="images/7-folder-with-json-of-pact.png"
-         alt="Arquivos json com os contratos."/><figcaption>
-            <p>Arquivos <code>json</code> com os contratos.</p>
+         alt="JSON files for the contracts."/><figcaption>
+            <p><code>JSON</code> files for the contracts.</p>
         </figcaption>
 </figure>
 
-<p>Basta agora publicar os arquivos para o <code>broker</code> conforme demonstrado abaixo.</p>
+<p>Now it&rsquo;s necessary to publish the contract to the <code>broker</code>, as demonstrated below.</p>
 <pre><code>./gradlew pactPublish
 </code></pre>
-<p>Ao acessar o <code>broker</code>, será possível visualizar os três contratos publicados.
+<p>When accessing the <code>broker</code>, it will be possible to visualize the three published contracts.
 <figure><img src="images/8-publish-contract-to-broker.png"
-         alt="Contratos publicados pelo consumidor."/><figcaption>
-            <p>Contratos publicados pelo consumidor.</p>
+         alt="Contracts published by consumer."/><figcaption>
+            <p>Contracts published by consumer.</p>
         </figcaption>
 </figure>
 </p>
-<h3 id="verificação-do-contrato-pelos-providers">Verificação do contrato pelos providers</h3>
-<p>Com os contratos publicados, o próximo passo é fazer a verificação pelos provedores. Nesta etapa, é possível impedir a liberação de qualquer alteração que quebre o contrato.</p>
-<p>São dois serviços que precisam verificar os contratos. Vamos começar com o <code>person-data-service</code>. Dentro do projeto, basta realizar o <code>clean</code> e o <code>build</code>, pois assim os testes serão executados.</p>
+<h3 id="contract-verification-by-the-providers">Contract verification by the <code>providers</code></h3>
+<p>With the contracts published, the next step is to verify them by the provider. During this step, it&rsquo;s possible to block a release if any changes break the contract.</p>
+<p>There are two services that need to verify the contracts. Let&rsquo;s begin with <code>person-data-service</code>. In the project, you need to run <code>clean</code> and <code>build</code>, and then the tests will be executed.</p>
 <pre><code>./gradlew clean build
 </code></pre>
-<p>Se tudo ocorrer conforme esperado, é então exibido na coluna <code>Last verified</code> a verificação realizada, conforme demonstrado na imagem abaixo.</p>
+<p>If everything works correctly, then the verification will display the last verified columns, as demonstrated in the image below.</p>
 <figure><img src="images/9-broker-verify-person-data-service.png"
-         alt="Verificação do contrato por person-data-service."/><figcaption>
-            <p>Verificação do contrato por <code>person-data-service</code>.</p>
+         alt="Contract verification by person-data-service."/><figcaption>
+            <p>Contract verification by <code>person-data-service</code>.</p>
         </figcaption>
 </figure>
 
-<p>O mesmo procedimento deve ser realizado para <code>book-data-service</code>, dentro do projeto fazer o <code>clean</code> e <code>build</code> do projeto.</p>
+<p>The same process must be performed for <code>book-data-service</code>. In the project folder, you need to run <code>clean</code> and <code>build</code>.</p>
 <pre><code>./gradlew clean build
 </code></pre>
-<p>Se os testes passarem, o <code>broker</code> é então atualizado com as verificações realizadas.</p>
+<p>If the tests pass, the <code>broker</code> will be updated with the performed verification.</p>
 <figure><img src="images/10-broker-verify-book-data-service.png"
-         alt="Verificação do contrato por book-data-service."/><figcaption>
-            <p>Verificação do contrato por <code>book-data-service</code>.</p>
+         alt="Contract verification by book-data-service."/><figcaption>
+            <p>Contract verification by <code>book-data-service</code>.</p>
         </figcaption>
 </figure>
 
-<h2 id="simulando-a-quebra-de-contratos">Simulando a quebra de contratos</h2>
-<p>Um grande benefício do uso de testes de contrato é a capacidade de garantir que os provedores possam fazer alterações sem afetar negativamente os consumidores. Para testar esse cenário, vamos simular algumas alterações e observar como o <code>Pact</code> responde a esse tipo de situação.</p>
-<h3 id="simulação-1-provider-remove-campo-da-api">Simulação 1: Provider remove campo da API</h3>
-<p>No primeiro cenário, o <code>person-data-service</code> realiza uma alteração removendo o campo número do passaporte, essencial para o serviço <code>book-sales-service</code>. Com a remoção do campo, a resposta do serviço fica da seguinte forma.</p>
+<h2 id="simulating-contract-breakage">Simulating Contract Breakage</h2>
+<p>A major benefit of using contract testing is the ability to ensure that providers can make changes without negatively affecting consumers. To test this scenario, let&rsquo;s simulate some changes and observe how <code>Pact</code> responds to this type of situation.</p>
+<h3 id="simulation-1-provider-removes-field-from-api">Simulation 1: Provider removes field from API</h3>
+<p>In the first scenario, the <code>person-data-service</code> makes a change by removing the passport number field, which is essential for the <code>book-sales-service</code>. With the removal of the field, the service response looks as follows.</p>
 <pre><code>{
     &quot;id&quot;:1002,
     &quot;name&quot;:&quot;Maria&quot;,
     &quot;country&quot;:&quot;Brazil&quot;
 }
 </code></pre>
-<p>Essa simulação de alteração está disponível em um <code>branch</code>, para acessar basta fazer o <code>checkout</code>.</p>
+<p>This change simulation is available on a branch, to access it simply perform a <code>checkout</code>.</p>
 <pre><code>git checkout simulation-1-person-data-remove-passport-number
 </code></pre>
-<p>Com a alteração realizada, o próximo passo é executar os testes de contrato do <code>person-data-service</code>. Para isso, o comando abaixo pode ser utilizado.</p>
+<p>With the change made, the next step is to run the contract tests for the <code>person-data-service</code>. For that, the command below can be used.</p>
 <pre><code>./gradlew clean build  
 </code></pre>
-<p>O teste falhará e a razão pode ser visualizada no relatório gerado.
+<p>The test will fail, and the reason can be viewed in the generated report.
 <figure><img src="images/11-contract-change-passport-report-fail.png"
-         alt="Relatório com detalhes sobre falha."/><figcaption>
-            <p>Relatório com detalhes sobre falha.</p>
+         alt="Report with failure details."/><figcaption>
+            <p>Report with failure details.</p>
         </figcaption>
 </figure>
 </p>
-<p>O <code>broker</code> também sinalizará uma quebra no contrato na matriz de verificação.
+<p>The <code>broker</code> also indicates a contract break in the matrix verifications.
 <figure><img src="images/12-contract-change-passport-matrix.png"
-         alt="Matriz de verificação do contrato."/><figcaption>
-            <p>Matriz de verificação do contrato.</p>
+         alt="Contract matrix verification."/><figcaption>
+            <p>Contract matrix verification.</p>
         </figcaption>
 </figure>
 </p>
-<p>Mais detalhes está disponível ao clicar no item da matriz com a falha.
+<p>Further details are available by clicking on the item in the matrix with failures.
 <figure><img src="images/13-contract-change-passport-broker-detail.png"
-         alt="Detalhes sobre a falha na verificação."/><figcaption>
-            <p>Detalhes sobre a falha na verificação.</p>
+         alt="Details about failure verifications."/><figcaption>
+            <p>Details about failure verifications.</p>
         </figcaption>
 </figure>
 </p>
-<h3 id="simulação-2-provider-renomeia-campo-da-api">Simulação 2: Provider renomeia campo da API</h3>
-<p>Na segunda simulação, o serviço <code>book-data-service</code> altera o nome do campo <code>stock</code> para <code>currentStock</code>. Com essa modificação, abaixo está o novo corpo de resposta da API.</p>
+<h3 id="simulation-2-provider-renames-api-field">Simulation 2: Provider renames API field</h3>
+<p>In the second simulation, the <code>book-data-service</code> changes the field name from <code>stock</code> to <code>currentStock</code>. Below is the new response body returned by the API.</p>
 <pre><code class="language-json">{
     &quot;id&quot;:201,
     &quot;name&quot;:&quot;Domain-Driven Design: Tackling Complexity in the Heart of Software&quot;,
@@ -686,82 +687,82 @@ public void aRequestToUpdateTheStockOfBook() {
     &quot;isbn&quot;:&quot;9780321125217&quot;
 }
 </code></pre>
-<p>Essa simulação de alteração também está disponível em um branch.</p>
+<p>This simulation change is also available in a branch.</p>
 <pre><code>git checkout simulation-2-book-data-change-stock-field-name
 </code></pre>
-<p>Para ver o teste quebrar, basta fazer o build do projeto.</p>
+<p>To observe the test failure, it&rsquo;s necessary to run the project build.</p>
 <pre><code>./gradlew clean build  
 </code></pre>
-<p>Um relatório com a falha também será gerado, apontando mais detalhes sobre a quebra de contrato.
+<p>A report with the failure is also generated, providing more details about the contract break.
 <figure><img src="images/14-contract-change-stock-name-report-fail.png"
-         alt="Relatório com detalhes sobre falha."/><figcaption>
-            <p>Relatório com detalhes sobre falha.</p>
+         alt="Report with failure details."/><figcaption>
+            <p>Report with failure details.</p>
         </figcaption>
 </figure>
 </p>
-<p>A matriz de verificação aponta mais detalhes sobre o histórico de verificação.
+<p>The matrix verification displays more details about the verifications.
 <figure><img src="images/15-contract-change-stock-name-matrix.png"
-         alt="Matriz de verificação do contrato."/><figcaption>
-            <p>Matriz de verificação do contrato.</p>
+         alt="Contract matrix verification."/><figcaption>
+            <p>Contract matrix verification.</p>
         </figcaption>
 </figure>
 </p>
-<p>Para ver mais detalhes sobre a falha, basta clicar no item da matriz.
+<p>Further details can be accessed by clicking on the item in the matrix with failures.
 <figure><img src="images/16-contract-change-stock-name-broker-detail.png"
-         alt="Detalhes sobre a falha na verificação."/><figcaption>
-            <p>Detalhes sobre a falha na verificação.</p>
+         alt="Details about failure verifications."/><figcaption>
+            <p>Details about failure verifications.</p>
         </figcaption>
 </figure>
 </p>
-<h3 id="simulação-3-provider-renomeia-campo-em-api-post">Simulação 3: Provider renomeia campo em API Post</h3>
-<p>Na terceira simulação, ocorre a mudança do nome do campo de <code>quantity</code> para <code>quantityToUpdate</code> na requisição de atualização do estoque para o microserviço <code>book-data-service</code>. Abaixo está o novo corpo da requisição com essa alteração.</p>
+<h3 id="simulation-3-provider-renames-field-in-post-api">Simulation 3: Provider renames field in Post API</h3>
+<p>In the third simulation, the <code>quantity</code> field is renamed to <code>quantityToUpdate</code> in the request to update the stock in the <code>book-data-service</code> microservice. Below are more details about the new request body.</p>
 <pre><code>{
     &quot;id&quot;: 202,
     &quot;quantityToUpdate&quot;: 1
 }
 </code></pre>
-<p>Essa simulação de alteração está disponível em um <code>branch</code>.</p>
+<p>This change simulation is available on a branch.</p>
 <pre><code>git checkout simulation-3-book-data-rename-field-name-post-request
 </code></pre>
-<p>Para ver o teste quebrar, basta fazer o build do projeto.</p>
+<p>To observe more details about the contract break, it&rsquo;s necessary to build the project.</p>
 <pre><code>./gradlew clean build  
 </code></pre>
-<p>O relatório com a falha será gerado, apontando mais detalhes sobre a quebra de contrato. Nesse caso, é esperado sucesso na operação, porém é retornado código 400 sinalizando que o campo <code>quantityToUpdate</code> não foi enviado no corpo da requisição.</p>
+<p>The report with the failures will be generated, showing more details about the contract break. In this case, success is expected; however, a status code 400 is returned, indicating that the <code>quantityToUpdate</code> field was not sent in the request body.
 <figure><img src="images/17-contract-change-post-stock-quantity-report-fail.png"
-         alt="Relatório com detalhes sobre falha."/><figcaption>
-            <p>Relatório com detalhes sobre falha.</p>
+         alt="Report with failure details."/><figcaption>
+            <p>Report with failure details.</p>
         </figcaption>
 </figure>
-
-<p>A matriz de verificação aponta mais detalhes sobre o histórico de verificação.
+</p>
+<p>The matrix verification displays more details about the verifications.
 <figure><img src="images/18-contract-change-post-stock-quantity-matrix.png"
-         alt="Matriz de verificação do contrato."/><figcaption>
-            <p>Matriz de verificação do contrato.</p>
+         alt="Contract matrix verification."/><figcaption>
+            <p>Contract matrix verification.</p>
         </figcaption>
 </figure>
 </p>
-<p>Para ver mais detalhes sobre a falha, basta clicar no item da matriz.
+<p>Further details can be accessed by clicking on the item in the matrix with failures.
 <figure><img src="images/19-contract-change-post-stock-quantity-broker-detail.png"
-         alt="Detalhes sobre a falha na verificação."/><figcaption>
-            <p>Detalhes sobre a falha na verificação.</p>
+         alt="Details about failure verifications."/><figcaption>
+            <p>Details about failure verifications.</p>
         </figcaption>
 </figure>
 </p>
-<h2 id="conclusão">Conclusão</h2>
-<p>A utilização de testes de contrato em ambientes com múltiplos microserviços simplifica a prevenção de quebras de contrato que possam afetar a integração entre as APIs. Embora demande um esforço adicional para preparar o ambiente e criar os contratos, uma vez feito isso, os serviços se tornam mais seguros e menos vulneráveis a falhas. Abaixo estão alguns dos benefícios ao utilizar testes de contrato:</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using contract tests in an environment with multiple microservices simplifies the prevention of contract breaks that can impact API integrations. Although it requires additional effort to prepare the environment and create the contracts, once this is done, the services will be safer and less vulnerable to failures. Below are some benefits of adopting contracts in a development flow.</p>
 <ul>
-<li>Os contratos tornam os serviços menos vulneráveis a falhas na integração, já que alterações que possam impactá-los passam a quebrar o contrato.</li>
-<li>Provedores que têm vários consumidores deixam explícito cada contrato. Assim, é mais fácil saber quais serviços dependem de algo específico e planejar alterações de forma mais segura.</li>
-<li>Refatorações tornam-se mais seguras, pois sabe-se exatamente o que cada consumidor utiliza na API. Um exemplo são campos incluídos sem justificativa e ninguém sabe ao certo por que estão ali.</li>
-<li>É uma maneira de padronizar os contratos entre microserviços em um cenário com várias equipes.</li>
-<li>Documentações são muito importantes, mas mais suscetíveis a falhas. Testes de contrato são uma forma automatizada que pode ser configurada para quebrar o <code>build</code> da aplicação em caso de falha de contrato.</li>
-<li>É uma abordagem que se assemelha ao <code>TDD (Test-Driven Development)</code>, onde os testes criados no provider são guiados pelos testes criados nos consumidores.</li>
+<li>Contracts make services less vulnerable to failures, as changes that affect other microservices break the contract.</li>
+<li>Providers with multiple consumers make each contract explicit, making it easier to understand which services depend on something specific and plan changes more safely.</li>
+<li>Refactorings are safer because it&rsquo;s clear exactly what each consumer uses in the API. For example, fields included without a reason and nobody knows why they are present in the API.</li>
+<li>It&rsquo;s a way to create a standard with contracts between APIs in a scenario with many teams.</li>
+<li>Documentation is important but vulnerable to failures. Contract tests are an automated approach that can be configured to break the build if there are any failures.</li>
+<li>It&rsquo;s an approach similar to Test-Driven Development (TDD), where the code created in the providers are guided by contract consumer tests.</li>
 </ul>
-<h2 id="referências">Referências</h2>
+<h2 id="references">References</h2>
 <ul>
-<li>Diagramas criados utilando o C4 Model. Mais detalhes em <a href="https://c4model.com/">https://c4model.com/</a>.</li>
+<li>Diagrams created using the C4 Model. More details at <a href="https://c4model.com/">https://c4model.com/</a>.</li>
 <li>Pact Documentation. <a href="https://docs.pact.io/">https://docs.pact.io/</a>.</li>
-<li>Contract Test. Martin Fowler. Disponível em <a href="https://martinfowler.com/bliki/ContractTest.html">https://martinfowler.com/bliki/ContractTest.html</a>.</li>
+<li>Contract Test. Martin Fowler. <a href="https://martinfowler.com/bliki/ContractTest.html">https://martinfowler.com/bliki/ContractTest.html</a>.</li>
 <li>Consumer-Driven Contracts: A Service Evolution Pattern. Ian Robinson. <a href="https://martinfowler.com/articles/consumerDrivenContracts.html">https://martinfowler.com/articles/consumerDrivenContracts.html</a>.</li>
 <li>Testing the Web Layer. <a href="https://spring.io/guides/gs/testing-web">https://spring.io/guides/gs/testing-web</a>.</li>
 <li>Pact Spring/JUnit5 Support. <a href="https://docs.pact.io/implementation_guides/jvm/provider/junit5spring">https://docs.pact.io/implementation_guides/jvm/provider/junit5spring</a>.</li>

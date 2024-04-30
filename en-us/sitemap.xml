@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://augustocolombelli.github.io/en-us/post/contract-test-pact/</loc>
+    <lastmod>2024-01-31T08:38:23-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://augustocolombelli.github.io/post/contract-test-pact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://augustocolombelli.github.io/en-us/post/contract-test-pact/"
+                />
+  </url><url>
     <loc>https://augustocolombelli.github.io/en-us/</loc>
+    <lastmod>2024-01-31T08:38:23-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -12,6 +26,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://augustocolombelli.github.io/en-us/"
+                />
+  </url><url>
+    <loc>https://augustocolombelli.github.io/en-us/post/</loc>
+    <lastmod>2024-01-31T08:38:23-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://augustocolombelli.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://augustocolombelli.github.io/en-us/post/"
                 />
   </url><url>
     <loc>https://augustocolombelli.github.io/en-us/tags/</loc>
